@@ -1,3 +1,5 @@
+@include('nav.header')
+
 <form action='/login' method="post">
     @csrf
     <div>
