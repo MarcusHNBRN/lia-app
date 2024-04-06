@@ -12,4 +12,7 @@
     </div>
     <button type="submit">Login</button>
 </form>
+
+<a href="/registration">Register</a>
+
 @include('errors')

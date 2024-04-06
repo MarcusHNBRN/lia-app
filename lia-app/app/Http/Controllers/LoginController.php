@@ -17,6 +17,6 @@ class LoginController extends Controller
         if (Auth::attempt($credatials)) {
             return redirect()->route('dashboard');
         }
-        return redirect()->back()->with('erroe', 'invalid credentials');
+        return redirect()->back()->with('error', 'invalid credentials');
     }
 }
