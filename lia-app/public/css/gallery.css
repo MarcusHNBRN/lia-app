@@ -1,0 +1,19 @@
+.studentMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap:40px;
+    margin-top: 10%;
+}
+
+.profileCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    height:100px;
+    background-color: aquamarine;
+}
