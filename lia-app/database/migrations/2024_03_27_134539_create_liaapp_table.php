@@ -17,20 +17,29 @@ return new class extends Migration
         });*/
         Schema::create('students', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('email');
-            $table->string('class');
+            $table->string('studentName');
+            $table->string('email')->unique();
+            $table->string('password');
+            //$table->string('class');
+            $table->boolean('WU')->default(0);
+            $table->boolean('DD')->default(0);
+            //$table->integer('age');
             //icke obligatoriska:
-            $table->string('cv');
-            $table->string('portfolio');
-            $table->string('linkedin');
-            $table->string('phone');
+            $table->string('skills')->nullable();
+            $table->string('cv')->nullable();
+            $table->string('portfolio')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('phone')->nullable();
         });
 
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
+            $table->string('companyName');
             $table->string('description');
             $table->string('adress');
-            $table->string('WuDd'); //ev, två bool rader
+            //$table->string('WuDd'); //ev, två bool rader
+            $table->boolean('WU');
+            $table->boolean('DD');
             $table->integer('availableSpots');
             $table->string('email');
             //$table->string('kompetenser'); borde gå in i description?

@@ -17,6 +17,11 @@ Route::post('/login', LoginController::class)->name('login.submit');
 Route::get('dashboard', DashboardController::class)->middleware('auth')->name('dashboard');
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::view('/', 'index')->name('login');
+
+Route::view('/studentGallery', 'studentGallery')->name('student');
+Route::view('/companyGallery', 'companyGallery')->name('company');
+
 Route::get('/registration', function () {
     return view('registration');
 });
+
