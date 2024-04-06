@@ -35,16 +35,18 @@ return new class extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('companyName');
+            $table->string('companyEmail')->unique();
+            $table->string('password');
             $table->string('description');
             $table->string('adress');
             //$table->string('WuDd'); //ev, två bool rader
-            $table->boolean('WU');
-            $table->boolean('DD');
+            $table->boolean('WU')->default(0);
+            $table->boolean('DD')->default(0);
             $table->integer('availableSpots');
             $table->string('email');
             //$table->string('kompetenser'); borde gå in i description?
             //icke obligatoriska:
-            $table->string('phone');
+            $table->string('phone')->nullable();
         });
     }
 
