@@ -2,6 +2,43 @@ body {
     background-color: #f4f4f4;
 }
 
+/** Filtrera och sökning **/
+.studentOptions {
+    height: 150px;
+    padding: 1.5rem;
+}
+
+.backButton {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    padding: 0.5rem;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.filterBar, .filterButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.6rem;
+    border-radius: 35px;
+    border: 2px solid black;
+}
+
+.filterBar { /*selma fixa text overflow*/
+    gap: 5%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 299px;
+}
+
+/** Elevgalleriet **/
 .studentMain {
     display: flex;
     align-items: center;
@@ -21,7 +58,7 @@ body {
     padding: 1rem;
     width: 90%;
     max-height:300px;
-    background-color: aquamarine;
+    background-color: lightgreen;
 }
 
 .profilePicture {
