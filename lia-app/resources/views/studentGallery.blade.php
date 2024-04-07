@@ -6,13 +6,18 @@ $students = DB::table('students')->get();
 <link rel="stylesheet" href="{{ asset('css/gallery.css') }}" />
 
 <div class="studentMain">
-@foreach ($students as $student)
-<div class="profileCard">
-    <p> {{ $student->studentName }} </p>
-    <p> {{ $student->WU }} </p>
-    <p>sKILLS:</p>
-    <p> {{ $student->skills }} </p>
-</div>
+    @foreach ($students as $student)
+    <div class="profileCard">
+        <div class="profilePicture">BILDHÄR</div>
+        <div class="firstDescriptionRow">
+            <h3 class="studentWUorDD"> {{ $student->WU }} </h3>
+            <p> skills: {{ $student->skills }} </p>
+        </div>
+        <div class="secondDescriptionRow">
+            <h1 class="studentName"> {{ $student->studentName }} </h1>
+            <p class="studentAge">25</p>
+        </div>
+    </div>
 
-@endforeach
+    @endforeach
 </div>
