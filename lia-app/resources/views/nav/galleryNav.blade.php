@@ -1,5 +1,5 @@
 <div class="studentOptions">
-    <div class="backButton"> <img src="/svgs/Vector.svg" alt="back"> </div>
+    <div class="backButton"> <img src="/svgs/leftArrow.svg" alt="back"> </div>
 
     <div class="filters">
         <div class="filterBar"> <img src="/svgs/search.svg" alt="search"> Sök efter företag, arbetsroll, etc</div>

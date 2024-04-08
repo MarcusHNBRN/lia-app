@@ -38,7 +38,8 @@ body {
     width: 299px;
 }
 
-/** Elevgalleriet **/
+
+/** ELEVGALLERIET / STUDENT GALLERY **/
 .studentMain {
     display: flex;
     align-items: center;
@@ -92,4 +93,49 @@ body {
     border-radius: 20px;
     padding: 0.5rem;
     border: 2px solid black;
+}
+
+/** FÖRETAGSGALLERIET / COMPANY GALLERY **/
+.companyMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 10%;
+}
+
+.companyCard {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-direction: column;
+
+    border-radius: 10px;
+    padding: 1rem;
+    width: 90%;
+    max-height:300px;
+    background-color: lightgreen;
+}
+
+.companyPicture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.companyName {
+
+}
+
+.commpanySpots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3%;
+    border: 2px solid black;
+    border-radius: 35px;
+    padding: 0.8rem;
+    color: red;
+    font-size: 20px;
 }
