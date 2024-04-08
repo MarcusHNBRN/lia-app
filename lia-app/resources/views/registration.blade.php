@@ -1,16 +1,25 @@
-<div>
-    <form action="{{ route('registration.submit') }}" method="post">
-        @csrf
+<button onclick="toggleForm('student')">Student Registration</button>
+<button onclick="toggleForm('company')">Company Registration</button>
 
-        <label form="name"> Name </label>
-        <input name="name" id="name" type="text" />
-
-        <label form="email"> Email </label>
-        <input name="email" id="email" type="email" />
-
-        <label form="password"> Password </label>
-        <input name="password" id="password" type="password" />
-
-        <button type="submit"> Register </button>
-    </form>
+<div id="student-form" class="registration-form">
+    @include('registration.student')
 </div>
+
+<div id="company-form" class="registration-form">
+    @include('registration.company')
+</div>
+
+<script>
+    function toggleForm(formType) {
+        const studentForm = document.getElementById('student-form');
+        const companyForm = document.getElementById('company-form');
+
+        if (formType === 'student') {
+            studentForm.style.display = 'block';
+            companyForm.style.display = 'none';
+        } else if (formType === 'company') {
+            studentForm.style.display = 'none';
+            companyForm.style.display = 'block';
+        }
+    }
+</script>
