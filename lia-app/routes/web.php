@@ -18,10 +18,11 @@ Route::get('dashboard', DashboardController::class)->middleware('auth')->name('d
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::view('/', 'index')->name('login');
 
-Route::view('/studentGallery', 'studentGallery')->name('student');
-Route::view('/companyGallery', 'companyGallery')->name('company');
-
 Route::get('/registration', function () {
     return view('registration');
 });
 
+/** Routes for galleries and individual students etc. **/
+Route::view('/studentGallery', 'gallery.studentGallery')->name('student');
+Route::view('/companyGallery', 'gallery.companyGallery')->name('company');
+Route::view('/company/{companyId}', 'gallery.companyDetail')->name('company.detail');
