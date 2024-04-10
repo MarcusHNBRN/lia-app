@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CompanyGalleryController;
 
 
 
@@ -24,5 +25,5 @@ Route::get('/registration', function () {
 
 /** Routes for galleries and individual students etc. **/
 Route::view('/studentGallery', 'gallery.studentGallery')->name('student');
-Route::view('/companyGallery', 'gallery.companyGallery')->name('company');
-Route::view('/company/{companyId}', 'gallery.companyDetail')->name('company.detail');
+Route::get('/companyGallery', [CompanyGalleryController::class, 'index'])->name('company.gallery');
+Route::get('/company/{companyId}', [CompanyGalleryController::class, 'show'])->name('company.detail');
