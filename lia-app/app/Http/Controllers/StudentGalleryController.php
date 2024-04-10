@@ -13,9 +13,9 @@ class StudentGalleryController extends Controller
         return view('gallery.studentGallery', compact('students'));
     }
 
-    public function show($companyId)
+    public function show($studentId)
     {
-        $company = Student::findOrFail($companyId);
+        $student = Student::findOrFail($studentId);
         return view('gallery.studentDetail', compact('student'));
     }
 }
