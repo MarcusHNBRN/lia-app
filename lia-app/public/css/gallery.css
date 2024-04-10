@@ -54,6 +54,7 @@ body {
     /*justify-content: space-between;*/
     flex-direction: column;
 
+    gap:50%;
     border-radius: 10px;
     border-bottom: 30px solid #dddddd;
     padding: 1rem;
