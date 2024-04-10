@@ -158,6 +158,13 @@ body {
 
 .studentContactInfo {
     background-color: #001A52;
+    color: #ffffff;
+}
+
+.sci {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /** FÖRETAGSGALLERIET / COMPANY GALLERY **/
