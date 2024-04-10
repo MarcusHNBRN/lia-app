@@ -25,4 +25,4 @@ Route::get('/registration', function () {
 /** Routes for galleries and individual students etc. **/
 Route::view('/studentGallery', 'gallery.studentGallery')->name('student');
 Route::view('/companyGallery', 'gallery.companyGallery')->name('company');
-Route::view('/company/{companyId}', 'gallery.companyDetail')->name('company.detail');
+Route::get('/company/{companyId}', 'gallery.companyDetail')->name('company.detail');
