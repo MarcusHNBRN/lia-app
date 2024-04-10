@@ -15,7 +15,7 @@ class Student extends Model
         'studentName',
         'email',
         'password',
-        'study',
+        'age',
     ];
 
 
