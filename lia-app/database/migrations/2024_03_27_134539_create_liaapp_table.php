@@ -45,7 +45,6 @@ return new class extends Migration
             $table->string('companyName');
             $table->string('companyEmail')->unique();
             $table->string('password');
-            $table->string('email');
             $table->string('adress');
             //icke obligatoriska:
             $table->string('phone')->nullable();
