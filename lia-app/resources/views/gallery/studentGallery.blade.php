@@ -12,7 +12,7 @@ $students = DB::table('students')->get();
     <div class="profileCard">
         <div class="profilePicture">BILDHÄR</div>
         <div class="firstDescriptionRow">
-            <h3 class="studentWUorDD"> {{ $student->WU }} </h3>
+            <h3 class="studentWUorDD"> {{ $student->study }} </h3>
             <p> skills: {{ $student->skills }} </p>
         </div>
         <div class="secondDescriptionRow">

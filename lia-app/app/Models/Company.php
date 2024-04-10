@@ -17,7 +17,10 @@ class Company extends Model
         'password',
     ];
 
-
+    public function CompanyliaInfo()
+    {
+        return $this->hasOne(CompanyInfo::class);
+    }
 
     public $timestamps = false;
 }
