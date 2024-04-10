@@ -11,6 +11,7 @@ $companies = DB::table('companies')->get();
 <div class="companyMain">
     @foreach ($companies as $company)
     <div class="companyCard">
+        <!--<a href="{{ route('company.detail', ['companyId' => $company->id]) }}">-->
         <a href="{{ route('company.detail', ['companyId' => $company->id]) }}">
             <div class="companyPicture">BILDHÄR</div>
             <div class="firstDescriptionRow">
