@@ -15,6 +15,7 @@ class Company extends Model
         'companyName',
         'companyEmail',
         'password',
+        'adress'
     ];
 
     public function CompanyliaInfo()
