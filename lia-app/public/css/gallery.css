@@ -95,6 +95,70 @@ body {
     padding: 0.5rem;
     border: 2px solid black;
 }
+/*detaljsida*/
+.studentBasicInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.studentDetailPicture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px; /*selma ändra till korrekt*/
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom:24px;
+    background-color: aqua;
+}
+
+.studentDetailName {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.studentDetailStudy {
+    font-size: 48px;
+}
+
+.studentDetailCity {
+    font-size: 24px;
+    font-weight: bold; /*selma fixa*/
+}
+
+.studentDetailAge {
+    text-align: center;
+    font-size: 34px;
+    padding: 5px;
+    width: 55px;
+    border: 3px solid black;
+    border-radius: 44%; /*selma snygga till*/
+}
+
+.studentMoreInfo {
+    display: grid;
+    gap: 24px;
+}
+
+.infoTitles {
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    background-color: violet;
+    font-size: 20px;
+}
+
+.infoTitlesLast {
+
+}
+
+.studentContactInfo {
+    background-color: #001A52;
+}
 
 /** FÖRETAGSGALLERIET / COMPANY GALLERY **/
 .companyMain {
