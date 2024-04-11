@@ -9,7 +9,7 @@
     <h1 class="studentDetailName"> {{ $student->studentName }} </h1>
     <h1 class="studentDetailStudy">DD / WU</h1>
     <h5 class="studentDetailCity">Stad</h5>
-    <div class="studentDetailAge"> {{ $student->age }} </div>
+    <div class="studentDetailAge"> 22 </div>
 </div>
 
 <div class="studentMoreInfo"> <!-- selma om det inte är inlagt? -->

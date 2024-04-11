@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('studentName');
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('age')->nullable();
+            //$table->integer('age')->nullable();
             //icke obligatoriska:
             $table->string('phone')->nullable();
             $table->timestamps();

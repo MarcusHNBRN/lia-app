@@ -2,6 +2,7 @@
 
 @php
 $students = DB::table('students')->get();
+$infos = DB::table('studentLiaInfo')->get();
 @endphp
 <link rel="stylesheet" href="{{ asset('css/gallery.css') }}" />
 
@@ -13,12 +14,12 @@ $students = DB::table('students')->get();
         <a href="{{ route('student.detail', ['studentId' => $student->id]) }}">
             <div class="profilePicture">BILDHÄR</div>
             <div class="firstDescriptionRow">
-                <h3 class="studentWUorDD"> KLASS HÄR </h3>
+                <h3 class="studentWUorDD"> {{ $student->study }} </h3>
                 <p> SKILLS </p>
             </div>
             <div class="secondDescriptionRow">
                 <h1 class="studentName"> {{ $student->studentName }} </h1>
-                <p class="studentAge"> {{ $student->age }} </p>
+                <p class="studentAge"> 22 </p>
             </div>
         </a>
     </div>
