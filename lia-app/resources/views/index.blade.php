@@ -1,6 +1,6 @@
 @include('nav.header')
 
-<form action='/login' method="post">
+<form action='/dashboard' method="post">
     @csrf
     <div>
         <label for="email">Email</label>

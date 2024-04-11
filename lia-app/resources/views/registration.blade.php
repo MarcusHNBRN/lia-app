@@ -1,29 +1,28 @@
 @include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
-<button onclick="toggleForm('student')">Student Registration</button>
-<button onclick="toggleForm('company')">Company Registration</button>
 
-<div class="form-container">
-    <div id="student-form" class="registration-form">
-        @include('registration.student')
-    </div>
+<a href="#" onclick="showStudentForm()">Student Registration</a>
+<a href="#" onclick="showCompanyForm()">Company Registration</a>
 
-    <div id="company-form" class="registration-form">
-        @include('registration.company')
-    </div>
+
+<div id="student-form" class="registration-form">
+    @include('registration.student')
+</div>
+</div>
+
+<div id="company-form" class="registration-form">
+    @include('registration.company')
+</div>
 </div>
 
 <script>
-    function toggleForm(formType) {
-        const studentForm = document.getElementById('student-form');
-        const companyForm = document.getElementById('company-form');
+    function showStudentForm() {
+        document.getElementById('student-form').style.display = 'block';
+        document.getElementById('company-form').style.display = 'none';
+    }
 
-        if (formType === 'student') {
-            studentForm.style.display = 'block';
-            companyForm.style.display = 'none';
-        } else if (formType === 'company') {
-            studentForm.style.display = 'none';
-            companyForm.style.display = 'block';
-        }
+    function showCompanyForm() {
+        document.getElementById('student-form').style.display = 'none';
+        document.getElementById('company-form').style.display = 'block';
     }
 </script>
