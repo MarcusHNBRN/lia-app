@@ -1,12 +1,16 @@
+@include('nav.header')
+<link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
 <button onclick="toggleForm('student')">Student Registration</button>
 <button onclick="toggleForm('company')">Company Registration</button>
 
-<div id="student-form" class="registration-form">
-    @include('registration.student')
-</div>
+<div class="form-container">
+    <div id="student-form" class="registration-form">
+        @include('registration.student')
+    </div>
 
-<div id="company-form" class="registration-form">
-    @include('registration.company')
+    <div id="company-form" class="registration-form">
+        @include('registration.company')
+    </div>
 </div>
 
 <script>
