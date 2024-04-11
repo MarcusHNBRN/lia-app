@@ -17,9 +17,10 @@ return new class extends Migration
             $table->string('studentName');
             $table->string('email')->unique();
             $table->string('password');
-            $table->integer('age');
+            $table->integer('age')->nullable();
             //icke obligatoriska:
             $table->string('phone')->nullable();
+            $table->timestamps();
         });
 
         Schema::create('studentLiaInfo', function (Blueprint $table) {
@@ -27,15 +28,16 @@ return new class extends Migration
             $table->unsignedBigInteger('studentId');
             $table->foreign('studentId')->references('id')->on('students')->onDelete('cascade');
             $table->string('study'); //WU eller DD
-            $table->string('city'); //Din ort
-            $table->string('about'); //Om dig
-            $table->string('education'); //Utbildningar
-            $table->string('work'); //Arbetslivserfarenhet
-            $table->string('interests'); //Intressen
-            $table->string('skills'); //Färdigheter
+            $table->string('city')->nullable(); //Din ort
+            $table->string('about')->nullable(); //Om dig
+            $table->string('education')->nullable(); //Utbildningar
+            $table->string('work')->nullable(); //Arbetslivserfarenhet
+            $table->string('interests')->nullable(); //Intressen
+            $table->string('skills')->nullable(); //Färdigheter
             //icke obligatoriska:
             $table->string('portfolio')->nullable(); //LÄNKAR
             $table->string('linkedin')->nullable(); //LÄNKAR
+            $table->timestamps();
         });
 
 
@@ -45,22 +47,31 @@ return new class extends Migration
             $table->string('companyName');
             $table->string('companyEmail')->unique();
             $table->string('password');
-            $table->string('adress');
+            $table->string('contactPerson');
+            $table->string('description')->nullable();
+            $table->string('industry');
+            $table->string('employees');
+            $table->string('language');
             //icke obligatoriska:
+            $table->string('linkedin')->nullable();
+            $table->string('homepage')->nullable();
+            $table->string('adress')->nullable();
             $table->string('phone')->nullable();
+            $table->timestamps();
         });
 
         Schema::create('companyLiaInfo', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('companyId');
             $table->foreign('companyId')->references('id')->on('companies')->onDelete('cascade');
-            $table->string('title'); //Annonstitel
-            $table->string('description'); //Om praktikplatsen
-            $table->string('yourJob'); //Arbetsuppgifter
-            $table->string('offer'); //Vad de erbjuder
-            $table->string('lookingFor'); //Din profil, vad de söker
-            $table->string('study'); //WU eller DD
-            $table->integer('availableSpots'); //Tillgängliga platser
+            $table->string('title')->nullable(); //Annonstitel
+            $table->string('description')->nullable(); //Om praktikplatsen
+            $table->string('yourJob')->nullable(); //Arbetsuppgifter
+            $table->string('offer')->nullable(); //Vad de erbjuder
+            $table->string('lookingFor')->nullable(); //Din profil, vad de söker
+            $table->string('study')->nullable(); //WU eller DD
+            $table->integer('availableSpots')->nullable(); //Tillgängliga platser
+            $table->timestamps();
         });
     }
 

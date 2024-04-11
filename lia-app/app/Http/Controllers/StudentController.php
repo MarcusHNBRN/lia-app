@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
 use App\Models\Student;
+use App\Models\StudentInfo;
 use Illuminate\Validation\ValidationException;
 
 class StudentController extends Controller
@@ -18,42 +18,49 @@ class StudentController extends Controller
             'email.email' => 'The email must be a valid email address.',
             'email.unique' => 'The email has already been registered.',
             'password.required' => 'Password must be filled in.',
+            'phone.required' => 'Phone number must be specified.',
+            'study.required' => 'Study must be specified.',
+            'study.in' => 'Invalid study type.',
         ];
 
         try {
             $validatedData = $request->validate([
                 'studentName' => 'required|string',
-                'email' => 'required|email:rfc|unique:students,email',
+                'email' => 'required|email|unique:students,email',
+                'password' => ['required', 'confirmed', 'min:8'],
                 'phone' => 'nullable|string',
-                'WU' => 'required_without:DD|boolean',
-                'DD' => 'required_without:WU|boolean',
-                'description' => 'nullable|string',
-                'linkedin' => 'nullable|url',
-                'portfolio' => 'nullable|url',
-                'skills' => 'nullable|string',
+                'study' => 'required|in:WU,DD',
+                'about' => 'nullable|string',
                 'education' => 'nullable|string',
-                'password' => ['required', 'confirmed', 'regex:/^(?=.*[A-Z])(?=.*\d{2,}).{8,}$/']
+                'work' => 'nullable|string',
+                'interests' => 'nullable|string',
+                'skills' => 'nullable|string',
+                'portfolio' => 'nullable|string|url',
+                'linkedin' => 'nullable|string|url',
             ], $messages);
 
-            $user = new User;
-            $user->name = $validatedData['studentName'];
-            $user->email = $validatedData['email'];
-            $user->password = Hash::make($validatedData['password']);
-            $user->save();
 
             $student = new Student;
             $student->studentName = $validatedData['studentName'];
             $student->email = $validatedData['email'];
             $student->password = Hash::make($validatedData['password']);
             $student->phone = $validatedData['phone'];
-            $student->WU = $validatedData['WU'] ?? false;
-            $student->DD = $validatedData['DD'] ?? false;
-            $student->linkedin = $validatedData['linkedin'];
-            $student->portfolio = $validatedData['portfolio'];
-            $student->skills = $validatedData['skills'];
             $student->save();
 
-            return redirect()->route('login')->with(['user' => $user]);
+
+            $studentLiaInfo = new StudentInfo;
+            $studentLiaInfo->studentId = $student->id;
+            $studentLiaInfo->study = $validatedData['study'];
+            $studentLiaInfo->about = $validatedData['about'];
+            $studentLiaInfo->education = $validatedData['education'];
+            $studentLiaInfo->work = $validatedData['work'];
+            $studentLiaInfo->interests = $validatedData['interests'];
+            $studentLiaInfo->skills = $validatedData['skills'];
+            $studentLiaInfo->portfolio = $validatedData['portfolio'];
+            $studentLiaInfo->linkedin = $validatedData['linkedin'];
+            $studentLiaInfo->save();
+
+            return redirect()->route('login')->with(['student' => $student]);
         } catch (ValidationException $e) {
             return redirect('/')->withErrors($e->errors());
         } catch (\Exception $e) {
@@ -61,5 +68,4 @@ class StudentController extends Controller
             return redirect('/')->withErrors('An unexpected error occurred.');
         }
     }
-
 }
