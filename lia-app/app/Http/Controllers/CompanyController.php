@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Company;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Log;
 
 class CompanyController extends Controller
 {
@@ -47,7 +48,10 @@ class CompanyController extends Controller
         } catch (ValidationException $e) {
             return redirect('/')->withErrors($e->errors());
         } catch (\Exception $e) {
-            return redirect('/')->withErrors('An unexpected error occurred.');
+            Log::error('An unexpected error occurred: ' . $e->getMessage());
+            Log::error('File: ' . $e->getFile() . ' Line: ' . $e->getLine());
+            Log::error('Stack Trace: ' . $e->getTraceAsString());
+            return redirect('/')->withErrors($e->getMessage());
         }
     }
 }
