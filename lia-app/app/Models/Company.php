@@ -15,9 +15,13 @@ class Company extends Model
         'companyName',
         'companyEmail',
         'password',
+        'adress'
     ];
 
-
+    public function CompanyliaInfo()
+    {
+        return $this->hasOne(CompanyInfo::class);
+    }
 
     public $timestamps = false;
 }

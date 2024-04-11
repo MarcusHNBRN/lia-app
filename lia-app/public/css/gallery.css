@@ -38,7 +38,8 @@ body {
     width: 299px;
 }
 
-/** Elevgalleriet **/
+
+/** ELEVGALLERIET / STUDENT GALLERY **/
 .studentMain {
     display: flex;
     align-items: center;
@@ -53,6 +54,7 @@ body {
     /*justify-content: space-between;*/
     flex-direction: column;
 
+    gap:50%;
     border-radius: 10px;
     border-bottom: 30px solid #dddddd;
     padding: 1rem;
@@ -92,4 +94,120 @@ body {
     border-radius: 20px;
     padding: 0.5rem;
     border: 2px solid black;
+}
+/*detaljsida*/
+.studentBasicInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.studentDetailPicture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px; /*selma ändra till korrekt*/
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom:24px;
+    background-color: aqua;
+}
+
+.studentDetailName {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.studentDetailStudy {
+    font-size: 48px;
+}
+
+.studentDetailCity {
+    font-size: 24px;
+    font-weight: bold; /*selma fixa*/
+}
+
+.studentDetailAge {
+    text-align: center;
+    font-size: 34px;
+    padding: 5px;
+    width: 55px;
+    border: 3px solid black;
+    border-radius: 44%; /*selma snygga till*/
+}
+
+.studentMoreInfo {
+    display: grid;
+    gap: 24px;
+}
+
+.infoTitles {
+    grid-column-start: 1;
+    grid-column-end: 1;
+
+    background-color: violet;
+    font-size: 20px;
+}
+
+.infoTitlesLast {
+
+}
+
+.studentContactInfo {
+    background-color: #001A52;
+    color: #ffffff;
+}
+
+.sci {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** FÖRETAGSGALLERIET / COMPANY GALLERY **/
+.companyMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 10%;
+}
+
+.companyCard {
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-direction: column;
+
+    border-radius: 10px;
+    padding: 1rem;
+    width: 90%;
+    max-height:300px;
+    background-color: lightgreen;
+}
+
+.companyPicture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.companyName {
+
+}
+
+.commpanySpots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3%;
+    border: 2px solid black;
+    border-radius: 35px;
+    padding: 0.8rem;
+    color: red;
+    font-size: 20px;
 }

@@ -15,9 +15,15 @@ class Student extends Model
         'studentName',
         'email',
         'password',
+        'age',
     ];
 
-    
+
+    public function StudentliaInfo()
+    {
+        return $this->hasOne(StudentInfo::class);
+    }
+
 
     public $timestamps = false;
 

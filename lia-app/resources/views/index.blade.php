@@ -15,4 +15,14 @@
 
 <a href="/registration">Register</a>
 
+<!-- Tillfälliga länkar så jag kommer åt sidorna: -->
+<br><br><br>
+<form action="{{ route('company.gallery') }}" method="GET">
+    <button type="submit">företag</button>
+</form>
+<br>
+<form action="{{ route('student.gallery') }}" method="GET">
+    <button type="submit">elever</button>
+</form>
+
 @include('errors')
