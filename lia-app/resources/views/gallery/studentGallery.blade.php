@@ -14,7 +14,9 @@ $infos = DB::table('studentLiaInfo')->get();
         <a href="{{ route('student.detail', ['studentId' => $student->id]) }}">
             <div class="profilePicture">BILDHÄR</div>
             <div class="firstDescriptionRow">
-                <h3 class="studentWUorDD"> {{ $student->study }} </h3>
+                @foreach ($infos as $info)
+                <h3 class="studentWUorDD"> {{ $info->study }} </h3>
+                @endforeach
                 <p> SKILLS </p>
             </div>
             <div class="secondDescriptionRow">

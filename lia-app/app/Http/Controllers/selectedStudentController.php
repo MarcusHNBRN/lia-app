@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\StudentInfo;
 use Illuminate\Http\Request;
 
 class selectedStudentController extends Controller
 {
     public function show($studentId) {
-        $company = Student::findOrFail($studentId);
-        return view('company.show', compact('company'));
+        $student = Student::findOrFail($studentId);
+        $studentInfo = StudentInfo::where('studentId', $studentId)->first();
+
+        return view('student.show', compact('student'));
     }
 }

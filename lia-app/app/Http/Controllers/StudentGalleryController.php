@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\StudentInfo;
 use Illuminate\Http\Request;
 
 class StudentGalleryController extends Controller
@@ -16,6 +17,8 @@ class StudentGalleryController extends Controller
     public function show($studentId)
     {
         $student = Student::findOrFail($studentId);
-        return view('gallery.studentDetail', compact('student'));
+        $studentInfo = StudentInfo::where('studentId', $studentId)->first();
+        //return view('gallery.studentDetail', compact('student'));
+        return view('gallery.studentDetail', ['student' => $student, 'studentInfo' => $studentInfo]);
     }
 }

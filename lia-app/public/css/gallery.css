@@ -140,20 +140,29 @@ body {
 }
 
 .studentMoreInfo {
-    display: grid;
-    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    background-color: aquamarine;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
-.infoTitles {
-    grid-column-start: 1;
-    grid-column-end: 1;
-
-    background-color: violet;
-    font-size: 20px;
+.infoContainer {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
 }
 
-.infoTitlesLast {
+.lastTwoItems {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.lastTwoItems .infoContainer {
+    flex-basis: calc(50% - 10px);
 }
 
 .studentContactInfo {
