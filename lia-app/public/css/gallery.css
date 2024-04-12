@@ -220,3 +220,94 @@ body {
     color: red;
     font-size: 20px;
 }
+
+/*detaljsida*/
+.companyBasicInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: lightgreen;
+    max-width: 650px;
+    min-width: 95%;
+    padding: 10px;
+    margin-bottom: 32px;
+}
+
+.companyName {
+    display: flex;
+}
+
+.workTitle {
+    display: flex;
+}
+
+.companyDetailPicture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lookingFor {
+
+}
+
+.dateAndPlace {
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+.dateAndPlaceContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #001A52;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+
+    width: 95%;
+    height: 46px; /*56px;*/
+    padding: 10px;
+}
+
+.about {
+    background-color: tomato;
+    padding: 10px;
+    margin-top: 32px;
+}
+
+.aboutButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.applyForLia {
+    background-color: #001A52;
+    color: #ffffff;
+    width: 152px;
+}
+
+.companyProfile {
+    border: 1px solid black;
+    width: 194px;
+}
+
+.applyForLia, .companyProfile {
+    padding: 13px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+@media (min-width:600px) {
+    .dateAndPlaceContent {
+        width: 400px;
+    }
+}
+
+/*TO DO: selma, aligna allt på detaljsidorna*/

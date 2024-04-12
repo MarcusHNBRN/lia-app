@@ -31,7 +31,6 @@ Route::get('/registration', function () {
 });
 
 /** Routes for galleries and individual students etc. **/
-//Route::view('/studentGallery', 'gallery.studentGallery')->name('student');
 Route::get('/studentGallery', [StudentGalleryController::class, 'index'])->name('student.gallery');
 Route::get('/student/{studentId}', [StudentGalleryController::class, 'show'])->name('student.detail');
 
