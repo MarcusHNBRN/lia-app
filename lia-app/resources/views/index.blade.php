@@ -26,3 +26,5 @@
 </form>
 
 @include('errors')
+
+@include('nav.footer')

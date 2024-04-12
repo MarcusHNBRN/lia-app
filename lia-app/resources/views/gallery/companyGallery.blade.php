@@ -24,3 +24,5 @@ $companies = DB::table('companies')->get();
     </div>
     @endforeach
 </div>
+
+@include('nav.footer')

@@ -305,6 +305,10 @@ body {
     align-items: center;
 }
 
+.companyAdress {
+    margin-bottom: 140px;
+}
+
 @media (min-width:600px) {
     .dateAndPlaceContent {
         width: 400px;
