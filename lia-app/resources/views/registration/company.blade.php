@@ -1,31 +1,102 @@
+<link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
 <form method="POST" action="{{ route('registration.company.submit') }}">
     @csrf
+    <div class="form-container">
+        <div class="input-container">
+            <p class="input-title"> Företagets Namn * </p>
+            <input type="text" name="companyName" placeholder="Företags Namn" required>
+        </div>
+        <div class="input-container">
+            <p class="input-title"> Företags Email * </p>
+            <input type="email" name="companyEmail" placeholder="Företags Email" required>
+        </div>
+        <div class="input-container">
+            <p class="input-title"> Företagets Kontaktperson * </p>
+            <input type="text" name="contactPerson" placeholder="Kontakt Person" required>
+        </div>
+        <div class="input-container">
+            <p class="input-title"> Telefonnummer </p>
+            <input type="tel" name="phone" placeholder="Phone Number">
+        </div>
+        <div class="input-container">
+            <p class="input-title"> Beskrivning om företaget </p>
+            <textarea name="description" placeholder="Description" required></textarea>
+        </div>
 
-    <input type="text" name="companyName" placeholder="Företags Namn" required>
-    <input type="email" name="companyEmail" placeholder="Företags Email" required>
-    <input type="text" name="contactPerson" placeholder="Kontakt Person" required>
-    <input type="tel" name="phone" placeholder="Phone Number">
-    <textarea name="description" placeholder="Description" required></textarea>
-    <select name="industry" required>
-        <option value="Bilindustrin">Bilindustrin</option>
-        <option value="Media och Kommunikation">Media och Kommunikation</option>
-        <option value="Film och TV-Produktion">Film och TV-Produktion</option>
-        <option value="Annat">Annat</option>
-    </select>
-    <select name="employees" required>
-        <option value="1-20">1-20</option>
-        <option value="20-100">20-100</option>
-        <option value="100+">100+</option>
-    </select>
-    <select name="language" required>
-        <option value="Egelska">Engelska</option>
-        <option value="Svenska">Svenska</option>
-    </select>
-    <input type="url" name="linkedin" placeholder="Länk till din Linkdin">
-    <input type="url" name="homepage" placeholder="Länk till din hemsida">
-    <input type="password" name="password" placeholder="Lösenord" required>
-    <input type="password" name="password_confirmation" placeholder="Confirm Password" required>
+        <div class="button-container">
+            <p class="title"> Klass
+            <p>
+            <div class="radio-button-container">
+                <label class="radio-button">
+                    <input type="radio" name="industry" value="Bilindustrin" required>
+                    <span>Bilindustrin</span>
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="industry" value="Media och Kommunikation" required>
+                    <span>Media och Kommunikation</span>
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="industry" value="Film och TV-Produktion" required>
+                    <span>Film och TV-Produktion</span>
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="industry" value="Annat" required>
+                    <span>Annat</span>
+                </label>
+            </div>
+        </div>
+        <div class="button-container">
+            <p class="title"> Klass
+            <p>
+            <div class="radio-button-container">
+                <label class="radio-button">
+                    <input type="radio" name="employees" value="1-20" required>
+                    <span>1-20</span>
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="employees" value="20-100" required>
+                    <span>20-100</span>
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="employees" value="100+" required>
+                    <span>100+</span>
+                </label>
+            </div>
+        </div>
 
+        <div class="button-container">
+            <p class="title"> Klass
+            <p>
+            <div class="radio-button-container">
+                <label class="radio-button">
+                    <input type="radio" name="language" value="english" required>
+                    <span>Engelska</span>
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="emplyees" value="swedish" required>
+                    <span>Svenska</span>
+                </label>
+            </div>
+        </div>
 
-    <button type="submit">Register</button>
+        <div class="input-container">
+            <p class="input-title"> Länk till företagets Linkdin </p>
+            <input type="url" name="linkedin" placeholder="Länk till din Linkdin">
+        </div>
+
+        <div class="input-container">
+            <p class="input-title"> länk till företagets hemsida </p>
+            <input type="url" name="homepage" placeholder="Länk till din hemsida">
+        </div>
+        <div class="input-container">
+            <p class="input-title"> Lösenord </p>
+            <input type="password" name="password" placeholder="Lösenord" required>
+
+        </div>
+        <div class="input-container">
+            <input type="password" name="password_confirmation" placeholder="Confirm Password" required>
+        </div>
+
+        <button type="submit">Register</button>
+    </div>
 </form>

@@ -1,5 +1,8 @@
-.registration-form {
-    display: none;
+:root {
+    --primary-color: #f52a3b;
+    --secondary: #001a52;
+    --faded: #e4e9eb;
+    --onyx: #333333;
 }
 
 body {
@@ -11,14 +14,137 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-form {
-    display: flex;
     flex-direction: column;
 }
 
-input {
-    margin: 10px;
+.choice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    text-align: left;
+    border-radius: 6px;
     width: 361px;
+    height: 136px;
+    background-color: var(--secondary);
+    margin: 16px;
+}
+
+.title {
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+}
+
+.input-title {
+    padding-bottom: 16px;
+    color: var(--onyx);
+}
+.input-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    text-align: left;
+}
+
+.input-container textarea {
+    width: 361px;
+    resize: vertical;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 8px 12px;
+    background-color: var(--faded);
+    color: var(--onyx);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 160px;
+    height: 32px;
+    border-radius: 30px;
+}
+
+.buttons button:hover {
+    background-color: var(--primary-color);
+    color: var(--faded);
+}
+
+input {
+    width: 361px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.radio-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-button {
+    background-color: var(--faded);
+    color: var(--onyx);
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 160px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.radio-button input {
+    width: 160px;
+    height: 32px;
+}
+
+.radio-button [type="radio"]:checked + span {
+    background-color: var(--primary-color);
+    color: var(--faded);
+}
+
+.file-button {
+    width: 329px;
+    height: 32px;
+    background-color: var(--faded);
+    color: var(--onyx);
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.file-button input {
+    width: 329px;
+    height: 32px;
+    background-color: var(--faded);
+}
+
+.file-button input[type="file"] {
+    display: none;
+}
+
+.file-button:hover {
+    background-color: var(--primary-color);
 }
