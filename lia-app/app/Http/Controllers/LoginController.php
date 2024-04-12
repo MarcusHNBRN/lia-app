@@ -12,9 +12,9 @@ class LoginController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $credatials = $request->only('email', 'password');
+        $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credatials)) {
+        if (Auth::attempt($credentials)) {
             return redirect()->route('dashboard');
         }
         return redirect()->back()->with('error', 'invalid credentials');

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Company;
-use App\Models\CompanyInfo;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Log;
 
@@ -50,6 +50,9 @@ class CompanyController extends Controller
             $company->linkedin = $validatedData['linkedin'];
             $company->homepage = $validatedData['homepage'];
             $company->password = Hash::make($validatedData['password']);
+            if ($request->hasFile('profile_picture')) {
+                $company->profile_picture = $this->storeFile($request->file('profile_picture'));
+            }
             $company->save();
 
 
@@ -62,5 +65,9 @@ class CompanyController extends Controller
             Log::error('Stack Trace: ' . $e->getTraceAsString());
             return redirect('/')->withErrors('An unexpected error occurred.');
         }
+    }
+    private function storeFile(UploadedFile $file)
+    {
+        return $file->get();
     }
 }

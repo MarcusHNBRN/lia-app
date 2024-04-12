@@ -1,6 +1,6 @@
 @include('nav.header')
 
-<form action='/dashboard' method="post">
+<form method="POST" action="{{ route('login.submit') }}">
     @csrf
     <div>
         <label for="email">Email</label>
@@ -11,6 +11,19 @@
         <input name="password" id="password" type="password" />
     </div>
     <button type="submit">Login</button>
+    @if ($errors->any())
+    <div>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
+    @if (session('error'))
+    <div>{{ session('error') }}</div>
+    @endif
 </form>
 
 <a href="/registration">Register</a>

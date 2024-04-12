@@ -88,6 +88,11 @@
             <p class="input-title"> länk till företagets hemsida </p>
             <input type="url" name="homepage" placeholder="Länk till din hemsida">
         </div>
+
+        <div class="input-container">
+            <p class="input-title"> Profile Picture </p>
+            <input type="file" name="profile_picture">
+        </div>
         <div class="input-container">
             <p class="input-title"> Lösenord </p>
             <input type="password" name="password" placeholder="Lösenord" required>

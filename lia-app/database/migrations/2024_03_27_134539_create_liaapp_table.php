@@ -34,6 +34,8 @@ return new class extends Migration
             $table->string('work')->nullable(); //Arbetslivserfarenhet
             $table->string('interests')->nullable(); //Intressen
             $table->string('skills')->nullable(); //Färdigheter
+            $table->binary('profile_picture')->nullable(); //Profilbild
+            $table->binary('cv')->nullable(); //CV
             //icke obligatoriska:
             $table->string('portfolio')->nullable(); //LÄNKAR
             $table->string('linkedin')->nullable(); //LÄNKAR
@@ -52,6 +54,7 @@ return new class extends Migration
             $table->string('industry');
             $table->string('employees');
             $table->string('language');
+            $table->binary('profile_picture')->nullable(); //Profilbild
             //icke obligatoriska:
             $table->string('linkedin')->nullable();
             $table->string('homepage')->nullable();
