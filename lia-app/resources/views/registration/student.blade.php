@@ -31,7 +31,7 @@
 
         <div class="input-container">
             <p class="input-title"> Kort beskrivning om dig själv </p>
-            <textarea name="about" placeholder="Kort beskrivning om dig själv" required></textarea>
+            <textarea name="about" placeholder="Kort beskrivning om dig själv"></textarea>
         </div>
         <div class="input-container">
             <p class="input-title"> Länk till din Linkdin </p>
@@ -43,21 +43,21 @@
         </div>
         <div class="input-container">
             <p class="input-title"> Arbetserfarenhet </p>
-            <textarea name="work" placeholder="Kort beskrivning om dig själv" required></textarea>
+            <textarea name="work" placeholder="Kort beskrivning om dig själv"></textarea>
         </div>
         <div class="input-container">
             <p class="input-title"> Utbildning </p>
-            <textarea name="education" placeholder="Kort beskrivning om dig själv" required></textarea>
+            <textarea name="education" placeholder="Kort beskrivning om dig själv"></textarea>
         </div>
 
         <div class="input-container">
-            <p class="input-title"> För och efternamn * </p>
-            <input type="text" name="skills" placeholder="Ex. Johan Larsson" required>
+            <p class="input-title"> Färdigheter </p>
+            <input type="text" name="skills">
         </div>
 
         <div class="input-container">
-            <p class="input-title"> För och efternamn * </p>
-            <input type="text" name="interests" placeholder="Ex. Johan Larsson" required>
+            <p class="input-title"> Intressen </p>
+            <input type="text" name="interests">
         </div>
 
         <div class="input-container">
