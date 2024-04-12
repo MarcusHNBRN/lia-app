@@ -165,17 +165,6 @@ body {
     flex-basis: calc(50% - 10px);
 }
 
-.studentContactInfo {
-    background-color: #001A52;
-    color: #ffffff;
-}
-
-.sci {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 /** FÖRETAGSGALLERIET / COMPANY GALLERY **/
 .companyMain {
     display: flex;
@@ -302,6 +291,18 @@ body {
     border-radius: 20px;
     text-align: center;
     margin-top: 24px;
+}
+
+/*BOTH COMPANY AND STUDENTS / GEMENSAM DESIGN*/
+.detailContactInfo {
+    background-color: #001A52;
+    color: #ffffff;
+}
+
+.contactItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media (min-width:600px) {
