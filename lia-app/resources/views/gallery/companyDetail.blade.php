@@ -29,3 +29,10 @@
 </div>
 
 @include('nav.galleryDetailContact')
+
+<div class="companyAdress">
+    <h1>Adress</h1>
+    <p>Här printas <br> adressen snyggt</p>
+</div>
+
+@include('nav.footer')

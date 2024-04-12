@@ -53,3 +53,5 @@
         <div>3</div>
     </div>
 </div>--->
+
+@include('nav.footer')

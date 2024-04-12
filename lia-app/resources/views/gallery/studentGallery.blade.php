@@ -28,3 +28,5 @@ $infos = DB::table('studentLiaInfo')->get();
 
     @endforeach
 </div>
+
+@include('nav.footer')
