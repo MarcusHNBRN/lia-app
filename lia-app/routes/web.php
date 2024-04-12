@@ -26,6 +26,7 @@ Route::view('/studentGallery', 'studentGallery')->name('student');
 Route::view('/companyGallery', 'companyGallery')->name('company');
 
 
+
 Route::get('/registration', function () {
     return view('registration');
 });

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Student;
@@ -40,6 +42,12 @@ class StudentController extends Controller
             ], $messages);
 
 
+            $user = new User;
+            $user->name = 'John Doe';
+            $user->email = $validatedData['email'];
+            $user->password = Hash::make($validatedData['password']);
+            $user->save();
+
             $student = new Student;
             $student->studentName = $validatedData['studentName'];
             $student->email = $validatedData['email'];
@@ -58,6 +66,9 @@ class StudentController extends Controller
             $studentLiaInfo->skills = $validatedData['skills'];
             $studentLiaInfo->portfolio = $validatedData['portfolio'];
             $studentLiaInfo->linkedin = $validatedData['linkedin'];
+            if ($request->hasFile('profile_picture')) {
+                $studentLiaInfo->profile_picture = $this->storeFile($request->file('profile_picture'));
+            }
             $studentLiaInfo->save();
 
             return redirect()->route('login')->with(['student' => $student]);
@@ -67,5 +78,10 @@ class StudentController extends Controller
             dd($e->getMessage());
             return redirect('/')->withErrors('An unexpected error occurred.');
         }
+    }
+
+    private function storeFile(UploadedFile $file)
+    {
+        return $file->get();
     }
 }

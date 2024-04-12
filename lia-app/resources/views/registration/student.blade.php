@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
-<form method="POST" action="{{ route('registration.student.submit') }}">
+<form method="POST" action="{{ route('registration.student.submit') }}" enctype="multipart/form-data">
     @csrf
     <div class="form-container">
         <div class="input-container">
@@ -58,6 +58,16 @@
         <div class="input-container">
             <p class="input-title"> Intressen </p>
             <input type="text" name="interests">
+        </div>
+
+        <div class="input-container">
+            <p class="input-title"> CV </p>
+            <input type="file" name="cv">
+        </div>
+
+        <div class="input-container">
+            <p class="input-title"> Profile Picture </p>
+            <input type="file" name="profile_picture">
         </div>
 
         <div class="input-container">
