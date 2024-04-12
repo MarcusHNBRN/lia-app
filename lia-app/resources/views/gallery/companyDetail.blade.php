@@ -27,3 +27,5 @@
     <h1 class="aboutTitles">Vi erbjuder:</h1>
     <h1 class="aboutTitles">Din profil</h1>
 </div>
+
+@include('nav.galleryDetailContact')
