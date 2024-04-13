@@ -27,7 +27,6 @@ main {
     align-items: center;
     flex-direction: column;
 
-    background-color: aqua;
     height: 534px;
     width: 100%;
 }
@@ -67,9 +66,9 @@ main {
     outline: inherit;
 }
 
-.createAccountButton, .companyGalleryButtonFirst, .buttonFirst {
+.createAccountButton, .companyGalleryButtonFirst {
     border-radius: 25px;
-    padding: 3px;
+    padding: 8px 16px;
 }
 
 .branscheventContainer {
