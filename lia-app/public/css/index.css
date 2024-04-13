@@ -1,0 +1,61 @@
+:root {
+    --blue: #001A52;
+    --red: #f52a3b;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 353px;
+}
+
+.welcomeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+}
+
+.yrgo {
+
+}
+
+.welcomeMessage {
+    padding: 12px;
+    text-align: center;
+}
+
+.createAccountButton {
+    background-color: var(--blue);
+    color: #ffffff;
+}
+
+.companyGalleryButton {
+    border: 1px solid black;
+}
+
+.button {
+    background: none;
+    border: none;
+    outline: inherit;
+}
+
+.createAccountButton, .companyGalleryButton, .button {
+    border-radius: 25px;
+    padding: 3px;
+}
