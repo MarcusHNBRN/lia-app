@@ -8,7 +8,7 @@
         </div>
         <div class="input-container">
             <p class="input-title"> Företags Email * </p>
-            <input type="email" name="companyEmail" placeholder="Företags Email" required>
+            <input type="email" name="email" placeholder="Företags Email" required>
         </div>
         <div class="input-container">
             <p class="input-title"> Företagets Kontaktperson * </p>

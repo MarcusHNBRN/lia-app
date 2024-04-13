@@ -8,15 +8,29 @@ use App\Models\Company;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
+
 
 class CompanyController extends Controller
 {
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::guard('company')->attempt($credentials)) {
+            return redirect()->route('company.dashboard');
+        }
+
+        return redirect()->back()->with('error', 'Invalid credentials');
+    }
+
     public function create(Request $request)
     {
         $messages = [
-            'companyEmail.required' => 'Email must be filled in.',
-            'companyEmail.email' => 'The email must be a valid email address.',
-            'companyEmail.unique' => 'The email has already been registered.',
+            'email.required' => 'Email must be filled in.',
+            'email.email' => 'The email must be a valid email address.',
+            'email.unique' => 'The email has already been registered.',
             'password.required' => 'Password must be filled in.',
             'study.required' => 'Study must be selected.',
             'study.in' => 'Invalid study selected.',
@@ -26,7 +40,7 @@ class CompanyController extends Controller
         try {
             $validatedData = $request->validate([
                 'companyName' => 'required|string',
-                'companyEmail' => 'required|email|unique:companies,companyEmail',
+                'email' => 'required|email|unique:companies,companyEmail',
                 'contactPerson' => 'required|string',
                 'phone' => 'nullable|string',
                 'description' => 'required|string',
@@ -40,7 +54,7 @@ class CompanyController extends Controller
 
             $company = new Company;
             $company->companyName = $validatedData['companyName'];
-            $company->companyEmail = $validatedData['companyEmail'];
+            $company->email = $validatedData['email'];
             $company->contactPerson = $validatedData['contactPerson'];
             $company->phone = $validatedData['phone'];
             $company->description = $validatedData['description'];

@@ -1,7 +1,10 @@
 @include('nav.header')
 <p>Hello, {{ $user->name }}!</p>
 <a href="{{ route('logout') }}">Logout</a>
-
-@if ($studentLiaInfo->profile_picture)
-<img src="data:image/jpeg;base64,{{ base64_encode($studentLiaInfo->profile_picture) }}" alt="Profile Picture">
-@endif
+<div>
+    @if(auth()->user()->isStudent())
+    <a href="{{ route('student.profile', ['id' => auth()->user()->student->id]) }}">View Profile</a>
+    @elseif(auth()->user()->isCompany())
+    <a href="{{ route('company.profile', ['id' => auth()->user()->company->id]) }}">View Profile</a>
+    @endif
+</div>
