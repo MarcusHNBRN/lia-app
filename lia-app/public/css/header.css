@@ -41,5 +41,4 @@ header {
 .headerLeft {
     justify-content: space-evenly;
     align-items: center;
-    margin-right: -10px; /*selma*/
 }
