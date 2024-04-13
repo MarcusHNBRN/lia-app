@@ -1,0 +1,26 @@
+/*** INTEGRITY GDPR PAGE  ***/
+:root {
+    --blue: #001A52;
+    --red: #f52a3b;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+main {
+    display: flex;
+    padding: 16px 16px;
+}
+
+.integrityContainer {
+    color: var(--black);
+}
+
+.integrityContainer p, .integrityContainer ul, .blueContent p, .blueContent h2{
+    padding: 16px;
+}
+
+.blueContent {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 20px;
+}

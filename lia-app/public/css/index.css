@@ -2,6 +2,7 @@
     --blue: #001A52;
     --red: #f52a3b;
     --white: #ffffff;
+    --black: #000000;
 }
 
 a {
@@ -57,7 +58,7 @@ main {
 }
 
 .companyGalleryButtonFirst {
-    border: 1px solid black;
+    border: 1px solid var(--black);
 }
 
 .buttonFirst, .buttonSecond {
@@ -120,7 +121,7 @@ main {
 }
 
 .companyGalleryButtonSecond .buttonSecond {
-    color: var(--white); /*selma fixa färgen*/
+    color: var(--white); 
     border: 1px solid var(--white);
 }
 

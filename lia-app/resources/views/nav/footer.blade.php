@@ -9,7 +9,7 @@
                 <p>Kontakt</p>
                 <p>För företag</p>
                 <p>För studenter</p>
-                <p>Integritetspolicy</p>
+                <p> <a href="{{ route('integrity') }}"> Integritetspolicy </a> </p>
             </div>
             <div class="footerRight">
                 <p>Nyheter</p>
