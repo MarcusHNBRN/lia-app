@@ -9,9 +9,22 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Student;
 use App\Models\StudentInfo;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::guard('student')->attempt($credentials)) {
+            return redirect()->route('student.dashboard');
+        }
+
+        return redirect()->back()->with('error', 'Invalid credentials');
+    }
+
     public function create(Request $request)
     {
         $messages = [
@@ -41,13 +54,6 @@ class StudentController extends Controller
                 'linkedin' => 'nullable|string|url',
             ], $messages);
 
-
-            $user = new User;
-            $user->name = 'John Doe';
-            $user->email = $validatedData['email'];
-            $user->password = Hash::make($validatedData['password']);
-            $user->save();
-
             $student = new Student;
             $student->studentName = $validatedData['studentName'];
             $student->email = $validatedData['email'];
@@ -68,6 +74,9 @@ class StudentController extends Controller
             $studentLiaInfo->linkedin = $validatedData['linkedin'];
             if ($request->hasFile('profile_picture')) {
                 $studentLiaInfo->profile_picture = $this->storeFile($request->file('profile_picture'));
+            }
+            if ($request->hasFile('cv')) {
+                $studentLiaInfo->cv = $this->storeFile($request->file('cv'));
             }
             $studentLiaInfo->save();
 

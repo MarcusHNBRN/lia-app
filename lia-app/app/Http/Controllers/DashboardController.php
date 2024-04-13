@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Student;
+use App\Models\Company;
 
 class DashboardController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(Request $request)
+    public function studentDashboard()
     {
-        $user = $request->user();
-        return view('dashboard', ['user' => $user]);
+        $student = Auth::guard('student')->user();
+        return view('dashboard.student_dashboard', compact('student'));
+    }
+
+    public function companyDashboard()
+    {
+        $company = Auth::guard('company')->user();
+        return view('dashboard.company_dashboard', compact('company'));
     }
 }
