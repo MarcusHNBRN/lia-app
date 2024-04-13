@@ -16,16 +16,16 @@ class LoginController extends Controller
     {
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            return redirect()->route('dashboard');
+        if ($this->isCompany($credentials)) {
+            if (Auth::guard('company')->attempt($credentials)) {
+                return redirect()->route('company_dashboard');
+            }
         }
 
-        if ($this->isCompany($credentials) && Auth::guard('company')->attempt($credentials)) {
-            return redirect()->route('company_dashboard');
-        }
-
-        if ($this->isStudent($credentials) && Auth::guard('student')->attempt($credentials)) {
-            return redirect()->route('student_dashboard');
+        if ($this->isStudent($credentials)) {
+            if (Auth::guard('student')->attempt($credentials)) {
+                return redirect()->route('student_dashboard');
+            }
         }
         return redirect()->back()->with('error', 'invalid credentials');
     }

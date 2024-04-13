@@ -13,7 +13,7 @@ class StudentProfileController extends Controller
     {
 
         $student = Student::findOrFail($id);
-        $studentInfo = StudentInfo::where('student_id', $id)->first();
+        $studentInfo = StudentInfo::where('studentId', $id)->first();
 
 
         return view('profile.student_profile', ['student' => $student, 'studentInfo' => $studentInfo]);
