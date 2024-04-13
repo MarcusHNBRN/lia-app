@@ -10,6 +10,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\StudentProfileController;
 use App\Http\Controllers\CompanyProfileController;
+use App\Http\Controllers\IntegrityController;
 
 
 
@@ -46,3 +47,6 @@ Route::get('/profile/company/{id}', [CompanyProfileController::class, 'show'])->
 /** Dashboard */
 Route::get('/dashboard/student', [DashboardController::class, 'studentDashboard'])->name('student_dashboard');
 Route::get('/dashboard/company', [DashboardController::class, 'companyDashboard'])->name('company_dashboard');
+
+/** Integrity / GDPR **/
+Route::get('/nav/integrity', [IntegrityController::class, 'GDPR'])->name('integrity');
