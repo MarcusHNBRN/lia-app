@@ -10,7 +10,6 @@ footer {
 
     background-color: #ffffff;
     color: black;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -30,8 +29,6 @@ footer {
 .yrgoFooter {
     display: flex;
     align-items: flex-start;
-
-
 }
 
 .footerLinks {
