@@ -1,42 +1,81 @@
 @include('nav.header')
+<link rel="stylesheet" href="{{ asset('css/index.css') }}" />
 
-<form method="POST" action="{{ route('login.submit') }}">
-    @csrf
-    <div>
-        <label for="email">Email</label>
-        <input name="email" id="email" type="email" />
+
+<main>
+    <div class="welcomeContainer">
+        <div class="yrgo"> <img src="/svgs/YRGO_logo_Y.svg" alt="yrgo"> </div>
+        <h1 class="welcomeMessage"> Välkommen till Yrgos LIA portal! </h1>
+        <div class="interestedButtonsFirst">
+            <div class="createAccountButton"> <a href="/registration">SKAPA KONTO</a> </div>
+            <div class="companyGalleryButtonFirst">
+                <form action="{{ route('company.gallery') }}" method="GET">
+                    <button type="submit" class="buttonFirst">FÖRETAGS-GALLERI</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div>
-        <label for="password">Password</label>
-        <input name="password" id="password" type="password" />
+
+    <div class="branscheventContainer">
+        <h1>Branschevent <br> WU+DD 2024</h1>
+        <h2>24 april kl 15:00</h2>
+        <p>Vi vill hälsa både elever och företag välkomna till det kommande eventet på Yrgo. Detta event ger elever en möjlighet att knyta kontakter med företag inom branschen samtidigt som det ger företagen en chans att hitta framtida kollegor. Varmt välkomna till Yrgo på Lärdomsgatan 3!</p>
     </div>
-    <button type="submit">Login</button>
-    @if ($errors->any())
-    <div>
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+
+    <div class="ledningsgruppen">
+        <h2>Företag från <br> ledningsgruppen</h2>
+        <marquee> <img src="/img/Big_Ledningsgruppen_AutoLayout.png" alt="företag" class="companyLogos"> </marquee>
     </div>
-    @endif
 
-    @if (session('error'))
-    <div>{{ session('error') }}</div>
-    @endif
-</form>
+    <div class="areYouInterested">
+        <h1>Verkar det intressant?</h1>
+        <p>Genom att skapa ett konto får du/ni full tillgång till plattformen och kan börja nätverka med företag och elever.</p>
+        <div class="interestedButtonsSecond">
+            <div class="createAccountButtonWhite"><a href="/registration">SKAPA KONTO</a></div>
+            <div class="companyGalleryButtonSecond">
+                <form action="{{ route('company.gallery') }}" method="GET">
+                    <button type="submit" class="buttonSecond">FÖRETAGS-GALLERI</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-<a href="/registration">Register</a>
+    <br><br><br><br>
+    <form method="POST" action="{{ route('login.submit') }}">
+        @csrf
+        <div>
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input name="password" id="password" type="password" />
+        </div>
+        <button type="submit">Login</button>
+        @if ($errors->any())
+        <div>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
-<!-- Tillfälliga länkar så jag kommer åt sidorna: -->
-<br><br><br>
-<form action="{{ route('company.gallery') }}" method="GET">
-    <button type="submit">företag</button>
-</form>
-<br>
-<form action="{{ route('student.gallery') }}" method="GET">
-    <button type="submit">elever</button>
-</form>
+        @if (session('error'))
+        <div>{{ session('error') }}</div>
+        @endif
+    </form>
+
+    <!-- Tillfälliga länkar så jag kommer åt sidorna: -->
+    <br>
+    <form action="{{ route('student.gallery') }}" method="GET">
+        <button type="submit">elever</button>
+    </form>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+</main>
 
 @include('errors')
 

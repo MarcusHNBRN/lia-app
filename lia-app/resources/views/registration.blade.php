@@ -1,5 +1,6 @@
 @include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
+<div class="backButton"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
 <h1> Skapa konto </h1>
 <div class="choice-container">
     <div class="button-container">

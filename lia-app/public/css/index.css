@@ -1,0 +1,135 @@
+:root {
+    --blue: #001A52;
+    --red: #f52a3b;
+    --white: #ffffff;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px; /*353px*/
+}
+
+.welcomeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 534px;
+    width: 100%;
+}
+
+.yrgo {
+
+}
+
+.welcomeMessage {
+    padding: 12px;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.interestedButtonsFirst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 32px;
+    gap: 16px;
+}
+
+.createAccountButton {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.companyGalleryButtonFirst {
+    border: 1px solid black;
+}
+
+.buttonFirst, .buttonSecond {
+    background: none;
+    border: none;
+    outline: inherit;
+}
+
+.createAccountButton, .companyGalleryButtonFirst {
+    border-radius: 25px;
+    padding: 8px 16px;
+}
+
+.branscheventContainer {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 62px 20px;
+}
+
+.branscheventContainer h2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.ledningsgruppen {
+    padding: 0 20px;
+    height: 244px;
+}
+
+.ledningsgruppen h2 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.companyLogos {
+    height: 80px;
+}
+
+.areYouInterested {
+    background-color: var(--red);
+    padding: 62px 20px;
+}
+
+.areYouInterested h1, .areYouInterested p {
+    color: var(--white);
+}
+
+.interestedButtonsSecond {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+
+    margin-top: 32px;
+    gap:16px;
+}
+
+.createAccountButtonWhite {
+    background-color: var(--white);
+}
+
+.companyGalleryButtonSecond .buttonSecond {
+    color: var(--white); /*selma fixa färgen*/
+    border: 1px solid var(--white);
+}
+
+.createAccountButtonWhite, .companyGalleryButtonSecond, .companyGalleryButtonSecond .buttonSecond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+    width: 175px;
+    height: 32px;
+}
