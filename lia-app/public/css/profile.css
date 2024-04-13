@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #f52a3b;
+    --secondary: #001a52;
+    --faded: #e4e9eb;
+    --onyx: #333333;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.profile-card {
+    width: 369px;
+    padding: 24px;
+}
+
+.contact-card {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 369px;
+    height: 176px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+button {
+    background-color: white;
+    width: 103px;
+    height: 32px;
+    border-radius: 30px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 264px;
+    height: 264px;
+}

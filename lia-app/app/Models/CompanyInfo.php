@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class CompanyInfo extends Model
 {
-    
+
     protected $table = 'companyLiaInfo';
 
     use HasFactory;
     public function company()
     {
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo(company::class);
     }
 }
