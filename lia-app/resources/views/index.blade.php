@@ -6,11 +6,13 @@
     <div class="welcomeContainer">
         <div class="yrgo"> <img src="/svgs/YRGO_logo_Y.svg" alt="yrgo"> </div>
         <h1 class="welcomeMessage"> Välkommen till Yrgos LIA portal! </h1>
-        <div class="createAccountButton"> <a href="/registration">SKAPA KONTO</a> </div>
-        <div class="companyGalleryButton">
-            <form action="{{ route('company.gallery') }}" method="GET">
-                <button type="submit" class="button">FÖRETAGS-GALLERI</button>
-            </form>
+        <div class="interestedButtonsFirst">
+            <div class="createAccountButton"> <a href="/registration">SKAPA KONTO</a> </div>
+            <div class="companyGalleryButtonFirst">
+                <form action="{{ route('company.gallery') }}" method="GET">
+                    <button type="submit" class="buttonFirst">FÖRETAGS-GALLERI</button>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -25,7 +27,20 @@
         <marquee> <img src="/img/Big_Ledningsgruppen_AutoLayout.png" alt="företag" class="companyLogos"> </marquee>
     </div>
 
-<br><br><br><br>
+    <div class="areYouInterested">
+        <h1>Verkar det intressant?</h1>
+        <p>Genom att skapa ett konto får du/ni full tillgång till plattformen och kan börja nätverka med företag och elever.</p>
+        <div class="interestedButtonsSecond">
+            <div class="createAccountButtonWhite"><a href="/registration">SKAPA KONTO</a></div>
+            <div class="companyGalleryButtonSecond">
+                <form action="{{ route('company.gallery') }}" method="GET">
+                    <button type="submit" class="buttonSecond">FÖRETAGS-GALLERI</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
     <form method="POST" action="{{ route('login.submit') }}">
         @csrf
         <div>
@@ -53,10 +68,13 @@
     </form>
 
     <!-- Tillfälliga länkar så jag kommer åt sidorna: -->
-    <br><br><br>
+    <br>
     <form action="{{ route('student.gallery') }}" method="GET">
         <button type="submit">elever</button>
     </form>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
 </main>
 
 @include('errors')
