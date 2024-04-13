@@ -15,10 +15,17 @@
     </div>
 
     <div class="branscheventContainer">
-        
+        <h1>Branschevent <br> WU+DD 2024</h1>
+        <h2>24 april kl 15:00</h2>
+        <p>Vi vill hälsa både elever och företag välkomna till det kommande eventet på Yrgo. Detta event ger elever en möjlighet att knyta kontakter med företag inom branschen samtidigt som det ger företagen en chans att hitta framtida kollegor. Varmt välkomna till Yrgo på Lärdomsgatan 3!</p>
     </div>
 
+    <div class="ledningsgruppen">
+        <h2>Företag från <br> ledningsgruppen</h2>
+        <marquee> <img src="/img/Big_Ledningsgruppen_AutoLayout.png" alt="företag" class="companyLogos"> </marquee>
+    </div>
 
+<br><br><br><br>
     <form method="POST" action="{{ route('login.submit') }}">
         @csrf
         <div>

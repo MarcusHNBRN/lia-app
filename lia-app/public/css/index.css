@@ -1,6 +1,7 @@
 :root {
     --blue: #001A52;
     --red: #f52a3b;
+    --white: #ffffff;
 }
 
 a {
@@ -17,7 +18,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    max-width: 353px;
+    max-width: 550px; /*353px*/
 }
 
 .welcomeContainer {
@@ -42,7 +43,7 @@ main {
 
 .createAccountButton {
     background-color: var(--blue);
-    color: #ffffff;
+    color: var(--white);
 }
 
 .companyGalleryButton {
@@ -58,4 +59,29 @@ main {
 .createAccountButton, .companyGalleryButton, .button {
     border-radius: 25px;
     padding: 3px;
+}
+
+.branscheventContainer {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 62px 20px;
+}
+
+.branscheventContainer h2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.ledningsgruppen {
+    padding: 0 20px;
+    height: 244px;
+}
+
+.ledningsgruppen h2 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.companyLogos {
+    height: 80px;
 }
