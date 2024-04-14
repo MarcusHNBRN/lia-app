@@ -14,8 +14,18 @@
                 <p> SKILLS </p>
             </div>
             <div class="secondDescriptionRow">
-                <h1> WU eller DD </h1>
-                <h6 class="commpanySpots"> 3 <img src="/svgs/people.svg" alt="spots"> </h6>
+            <p class="studentWUorDD subtitle1">
+                    <!--- @if ($companyInfos[$company->id]->study === 'WU')
+                    Webbutvecklare
+                    @elseif ($companyInfos[$company->id]->study === 'DD')
+                    Digital Designer
+                    @else
+                    N/A
+                    @endif --->
+                    {{ $companyInfos[$company->id]->study }}
+
+                </p>
+                <h6 class="commpanySpots"> {{ $companyInfos[$company->id]->availableSpots }} <img src="/svgs/people.svg" alt="spots"> </h6>
             </div>
         </a>
     </div>
