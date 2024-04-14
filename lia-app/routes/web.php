@@ -43,6 +43,10 @@ Route::get('/company/{companyId}', [CompanyGalleryController::class, 'show'])->n
 /** Profiles */
 Route::get('/profile/student/{id}', [StudentProfileController::class, 'show'])->name('student.profile');
 Route::get('/profile/company/{id}', [CompanyProfileController::class, 'show'])->name('company.profile');
+Route::get('/profile/student/{id}/edit', [StudentProfileController::class, 'edit'])->name('student.profile.edit');
+Route::put('/profile/student/{id}/update', [StudentProfileController::class, 'update'])->name('student.profile.update');
+Route::get('/profile/company/{id}/edit', [CompanyProfileController::class, 'edit'])->name('company.profile.edit');
+Route::put('/profile/company/{id}/update', [CompanyProfileController::class, 'update'])->name('company.profile.update');
 
 /** Dashboard */
 Route::get('/dashboard/student', [DashboardController::class, 'studentDashboard'])->name('student_dashboard');

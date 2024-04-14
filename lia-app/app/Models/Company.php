@@ -16,7 +16,15 @@ class Company extends Authenticatable
         'companyName',
         'email',
         'password',
-        'adress'
+        'adress',
+        'contactPerson',
+        'phone',
+        'description',
+        'industry',
+        'employees',
+        'language',
+        'linkedin',
+        'homepage'
     ];
 
     public function CompanyInfo()

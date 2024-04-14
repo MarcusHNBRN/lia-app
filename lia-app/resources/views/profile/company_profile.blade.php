@@ -1,6 +1,8 @@
 @include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
-
+@if(Auth::guard('student')->check())
+<a href="{{ route('company.profile.edit', ['id' => Auth::guard('company')->user()->id]) }}">Edit</a>
+@endif
 <div class="profile">
     @if ($company->profile_picture)
     <img src="data:image/jpeg;base64,{{ base64_encode($company->profile_picture) }}" alt="Company Logo" class="profile-picture">
