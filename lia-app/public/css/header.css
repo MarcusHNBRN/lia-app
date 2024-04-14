@@ -25,6 +25,13 @@ h4 {
     line-height: 36px;
 }
 
+h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 300;
+}
+
 h5 {
     font-family: "Inter", sans-serif;
     font-size: 24px;
@@ -52,6 +59,13 @@ h5 {
     font-size: 14px;
     letter-spacing: 1.25px;
     line-height: 16px;
+}
+
+.subtitle1 {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.15px;
+    line-height: 24px;
 }
 
 .subtitle2 {

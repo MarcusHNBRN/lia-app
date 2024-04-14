@@ -6,38 +6,38 @@
 
 <div class="studentBasicInfo">
     <div class="studentDetailPicture"> Bild här </div>
-    <h1 class="studentDetailName"> {{ $student->studentName }} </h1>
-    <h1 class="studentDetailStudy"> {{ $studentInfo->study }} </h1>
+    <h4 class="studentDetailName"> {{ $student->studentName }} </h4>
+    <h3 class="studentDetailStudy"> {{ $studentInfo->study }} </h3>
     <h5 class="studentDetailCity"> stad? </h5>
-    <div class="studentDetailAge"> 22 </div>
+    <h4 class="studentDetailAge"> 22 </h4>
 </div>
 
 <div class="studentMoreInfo"> <!-- selma om det inte är inlagt? -->
     <div class="firstThreeItems">
         <div class="infoContainer">
-            <h1 class="infoTitles">Om mig</h1>
-            <p> {{ $studentInfo->about }} </p>
+            <h5 class="infoTitles">Om mig</h5>
+            <p class="body2"> {{ $studentInfo->about }} </p>
         </div>
 
         <div class="infoContainer">
-            <h1 class="infoTitles">Utbildningar</h1>
-            <p> {{ $studentInfo->education }} </p>
+            <h5 class="infoTitles">Utbildningar</h5>
+            <p class="body2"> {{ $studentInfo->education }} </p>
         </div>
 
         <div class="infoContainer">
-            <h1 class="infoTitles">Arbetslivserfarenhet</h1>
-            <p> {{ $studentInfo->work }} </p>
+            <h5 class="infoTitles">Arbetslivserfarenhet</h5>
+            <p class="body2"> {{ $studentInfo->work }} </p>
         </div>
     </div>
 
     <div class="lastTwoItems">
         <div class="infoContainer">
-            <h1 class="infoTitles">Intressen</h1>
-            <p> {{ $studentInfo->interests }} </p>
+            <h5 class="infoTitles">Intressen</h5>
+            <p class="body2"> {{ $studentInfo->interests }} </p>
         </div>
 
         <div class="infoContainer">
-            <h1 class="infoTitles">Färdigheter</h1>
+            <h5 class="infoTitles">Färdigheter</h5>
             <p> {{ $studentInfo->skills }} </p>
         </div>
     </div>
