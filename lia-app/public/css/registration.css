@@ -15,29 +15,30 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 16px;
 }
 
 .choice-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .button-container {
     text-align: left;
     border-radius: 6px;
-    width: 361px;
-    height: 136px;
     background-color: var(--secondary);
-    margin: 16px;
+    padding: 16px;
+    width: 345px;
 }
 
 .title {
     margin: 0;
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 32px;
     padding-bottom: 16px;
+    color: var(--faded);
 }
 
 .input-title {
@@ -76,6 +77,7 @@ body {
     width: 160px;
     height: 32px;
     border-radius: 30px;
+    border: none;
 }
 
 .buttons button:hover {
@@ -90,18 +92,46 @@ input {
     border-right: none;
 }
 
+.industry-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.industry-button {
+    background-color: var(--faded);
+    color: var(--onyx);
+    border-radius: 30px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .radio-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-
-.radio-button input[type="radio"] {
+.study-button input[type="radio"],
+.language-button input[type="radio"],
+.employees-button input[type="radio"],
+.industry-button input[type="radio"] {
     display: none;
 }
 
-.radio-button {
+.language-button:hover,
+.employees-button:hover,
+.study-button:hover,
+.industry-button:hover {
+    background-color: var(--primary-color);
+    color: var(--faded);
+}
+
+.language-button,
+.employees-button,
+.study-button {
     background-color: var(--faded);
     color: var(--onyx);
     border-radius: 30px;
@@ -114,37 +144,95 @@ input {
     align-items: center;
     border: none;
 }
+.study-button input:checked + span,
+.language-button input:checked + span {
+    width: 160px;
+    height: 32px;
+}
+
+.employees-button input:checked + span {
+    width: 108.34px;
+    height: 32px;
+}
+
+.industry-button input:checked + span {
+    width: 345px;
+    height: 32px;
+}
+
+.study-button input:checked + span,
+.language-button input:checked + span,
+.employees-button input:checked + span,
+.industry-button input:checked + span {
+    background-color: var(--primary-color);
+    color: var(--faded);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .radio-button input {
     width: 160px;
     height: 32px;
 }
+.card-container {
+    width: 345px;
+    background-color: var(--secondary);
+    border-radius: 6px;
+    padding: 16px;
+}
 
-.radio-button [type="radio"]:checked + span {
+/* File upload */
+
+.file-title {
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    color: var(--faded);
+    float: left;
+}
+
+.file-container {
+    text-align: left;
+    text-align: center;
+}
+
+#profile-picture-input,
+#cv-file-input,
+#profile-picture-company-input {
+    display: none;
+}
+
+#file-label {
+    background-color: var(--faded);
+    color: var(--onyx);
+    border-radius: 30px;
+    width: 329px;
+    max-width: 329px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#file-label:hover {
     background-color: var(--primary-color);
     color: var(--faded);
 }
 
-.file-button {
-    width: 329px;
-    height: 32px;
-    background-color: var(--faded);
-    color: var(--onyx);
-    border-radius: 30px;
-    cursor: pointer;
-    border: none;
-}
-
-.file-button input {
-    width: 329px;
-    height: 32px;
-    background-color: var(--faded);
-}
-
-.file-button input[type="file"] {
-    display: none;
-}
-
-.file-button:hover {
+#file-label.red {
     background-color: var(--primary-color);
+    color: var(--faded);
+}
+
+#file-label.selected::before {
+    content: attr(data-file-name);
+}
+
+.file-label[data-file-name] {
+    white-space: normal;
 }

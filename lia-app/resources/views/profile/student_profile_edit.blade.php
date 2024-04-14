@@ -8,9 +8,12 @@
 
     <div class="form-container">
 
-        <div class="input-container">
-            <p class="input-title"> Profile Picture </p>
-            <input type="file" name="profile_picture">
+        <div class="card-container">
+            <div class="file-container">
+                <p class="file-title"> Profile Picture </p>
+                <input type="file" id="profile-picture-input" name="profile_picture" onchange="updateFileName('profile-picture-input')">
+                <label for="profile-picture-input" id="file-label">Choose File</label>
+            </div>
         </div>
 
         <div class="input-container">
@@ -71,11 +74,16 @@
             <textarea name="interests" placeholder="Kort beskrivning om dig själv">{{ $studentInfo->interests }}</textarea>
         </div>
 
-        <div class="input-container">
-            <p class="input-title"> CV </p>
-            <input type="file" name="cv" value="{{ $studentInfo->cv }}">
+        <div class="card-container">
+            <div class="file-container">
+                <p class="file-title"> Ladda up dit cv </p>
+                <input type="file" id="cv-file-input" name="CV" onchange="updateFileName('cv-file-input')">
+                <label for="cv-file-input" id="file-label">Choose File</label>
+            </div>
         </div>
 
         <button type="submit">Update</button>
     </div>
 </form>
+
+<script src="{{ asset('js/registration.js') }}"></script>

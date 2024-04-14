@@ -15,15 +15,15 @@
             <p class="input-title"> Telefonnummer * </p>
             <input type="tel" name="phone" placeholder="Telefonnummer" required>
         </div>
-        <div class="button-container">
+        <div class="card-container">
             <p class="title"> Klass
             <p>
             <div class="radio-button-container">
-                <label class="radio-button">
+                <label class="study-button">
                     <input type="radio" name="study" value="WU" required>
                     <span>WU</span>
                 </label>
-                <label class="radio-button">
+                <label class="study-button">
                     <input type="radio" name="study" value="DD" required>
                     <span>DD</span>
             </div>
@@ -60,14 +60,22 @@
             <input type="text" name="interests">
         </div>
 
-        <div class="input-container">
-            <p class="input-title"> CV </p>
-            <input type="file" name="cv">
+
+
+        <div class="card-container">
+            <div class="file-container">
+                <p class="file-title"> Ladda up dit cv </p>
+                <input type="file" id="cv-file-input" name="CV" onchange="updateFileName('cv-file-input')">
+                <label for="cv-file-input" id="file-label">Choose File</label>
+            </div>
         </div>
 
-        <div class="input-container">
-            <p class="input-title"> Profile Picture </p>
-            <input type="file" name="profile_picture">
+        <div class="card-container">
+            <div class="file-container">
+                <p class="file-title"> Profile Picture </p>
+                <input type="file" id="profile-picture-input" name="profile_picture" onchange="updateFileName('profile-picture-input')">
+                <label for="profile-picture-input" id="file-label">Choose File</label>
+            </div>
         </div>
 
         <div class="input-container">
@@ -84,3 +92,5 @@
         <button type="submit">Register</button>
     </div>
 </form>
+
+<script src="{{ asset('js/registration.js') }}"></script>

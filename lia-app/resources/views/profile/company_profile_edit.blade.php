@@ -5,9 +5,12 @@
 
     <div class="form-container">
 
-        <div class="input-container">
-            <p class="input-title"> Profile Picture </p>
-            <input type="file" name="profile_picture">
+        <div class="card-container">
+            <div class="file-container">
+                <p class="file-title"> Profile Picture </p>
+                <input type="file" id="profile-picture-input" name="profile_picture" onchange="updateFileName('profile-picture-input')">
+                <label for="profile-picture-input" id="file-label">Choose File</label>
+            </div>
         </div>
 
         <div class="input-container">
@@ -100,3 +103,5 @@
         <button type="submit">Update</button>
     </div>
 </form>
+
+<script src="{{ asset('js/registration.js') }}"></script>
