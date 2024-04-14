@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CompanyInfo extends Model
 {
-
+    
     protected $table = 'companyLiaInfo';
 
     use HasFactory;
