@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Company;
+use App\Models\CompanyInfo;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Log;
@@ -69,6 +70,16 @@ class CompanyController extends Controller
             }
             $company->save();
 
+            $companyLiaInfo = new CompanyInfo;
+            $companyLiaInfo->companyId = $company->id;
+            $companyLiaInfo->study = $validatedData['title'];
+            $companyLiaInfo->study = $validatedData['description'];
+            $companyLiaInfo->study = $validatedData['yourJob'];
+            $companyLiaInfo->study = $validatedData['offer'];
+            $companyLiaInfo->study = $validatedData['lookingFor'];
+            $companyLiaInfo->study = $validatedData['study'];
+            $companyLiaInfo->study = $validatedData['availableSpots'];
+            $companyLiaInfo->save();
 
             return redirect()->route('login')->with(['company' => $company]);
         } catch (ValidationException $e) {

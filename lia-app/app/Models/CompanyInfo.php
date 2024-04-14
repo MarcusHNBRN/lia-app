@@ -7,8 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class CompanyInfo extends Model
 {
-    
+
     protected $table = 'companyLiaInfo';
+
+    protected $fillable = [
+        'companyId',
+        'title',
+        'description',
+        'yourJob',
+        'offer',
+        'lookingFor',
+        'study',
+        'availableSpots'
+    ];
 
     use HasFactory;
     public function company()

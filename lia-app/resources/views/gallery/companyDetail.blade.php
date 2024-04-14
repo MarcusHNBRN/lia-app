@@ -6,7 +6,7 @@
 
 <div class="companyBasicInfo">
     <h3 class="companyName"> {{ $company->companyName }} </h3>
-    <h2 class="workTitle"> Arbetstitel </h2>
+    <h2 class="workTitle"> {{ $companyInfo->study }} </h2>
     <div class="companyDetailPicture"> BILD HÄR </div>
     <div class="lookingFor"> Kort beskrivning kring vad de söker här </div>
 </div>

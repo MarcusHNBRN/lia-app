@@ -10,7 +10,16 @@
         <a href="{{ route('student.detail', ['studentId' => $student->id]) }}">
             <div class="profilePicture">BILDHÄR</div>
             <div class="firstDescriptionRow">
-                <p class="studentWUorDD subtitle1"> {{ $studentInfos[$student->id]->study ?? 'N/A' }} </p>
+                <p class="studentWUorDD subtitle1">
+                    @if ($studentInfos[$student->id]->study === 'WU')
+                    Webbutvecklare
+                    @elseif ($studentInfos[$student->id]->study === 'DD')
+                    Digital Designer
+                    @else
+                    N/A
+                    @endif
+                    
+                </p>
                 <p> SKILLS </p>
             </div>
             <div class="secondDescriptionRow">

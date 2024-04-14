@@ -95,6 +95,63 @@
             </div>
         </div>
 
+        <!--------selma--------->
+        <h1>Lägg upp Lia-annons!</h1>
+
+        <div class="input-container">
+            <p class="input-title"> Annonstitel *</p>
+            <input type="text" name="title" placeholder="Titel" required>
+        </div>
+
+        <div class="card-container">
+            <p class="title"> Klass </p>
+            <div class="radio-button-container">
+                <label class="language-button">
+                    <input type="radio" name="study" value="Webbutvecklare" required>
+                    <span>Webbutvecklare</span>
+                </label>
+                <label class="language-button">
+                    <input type="radio" name="study" value="Digital Designer" required>
+                    <span>Digital Designer</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <p class="input-title"> Beskrivning *</p>
+            <input type="text" name="description" placeholder="Beskriv uppdraget" required>
+        </div>
+
+        <div class="input-container">
+            <p class="input-title"> Arbetsuppgifter *</p>
+            <input type="text" name="yourJob" placeholder="Beskriv elevens arbetsuppgifter" required>
+        </div>
+
+        <div class="input-container">
+            <p class="input-title"> Vad erbjuder ni? </p>
+            <input type="text" name="offer" placeholder="Beskriv arbetsplats, möjligheter etc" required>
+        </div>
+
+        <div class="input-container">
+            <p class="input-title"> Vad söker ni? </p>
+            <input type="text" name="lookingFor" placeholder="T.ex kompetenser, erfarenhet etc" required>
+        </div>
+
+        <div class="input-container">
+            <p class="input-title">Antal platser</p>
+            <select id="availableSpots">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+        </div>
+
+        <!----------------->
+
         <div class="input-container">
             <p class="input-title"> Lösenord </p>
             <input type="password" name="password" placeholder="Lösenord" required>
