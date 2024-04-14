@@ -1,4 +1,4 @@
-@include('nav.header')
+@include('nav.headerIndex')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
 
 

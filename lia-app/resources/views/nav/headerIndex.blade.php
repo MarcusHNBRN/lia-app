@@ -16,10 +16,7 @@
                 </div>
             </div>
             <div class="headerLeft">
-                <!--<div class="homeButton"> <img src="/svgs/Home.svg" alt="home"> </div>
-                <div class="accountButton"> <img src="/svgs/you.svg" alt="your account"> </div>
-                <div class="settingsButton"> <img src="/svgs/Gear.svg" alt="settings"> </div>-->
-                FIX BURGER
+                <div class="signIn"> LOG IN </div>
             </div>
         </div>
     </header>
