@@ -1,9 +1,5 @@
 @include('nav.header')
 
-@php
-$students = DB::table('students')->get();
-$infos = DB::table('studentLiaInfo')->get();
-@endphp
 <link rel="stylesheet" href="{{ asset('css/gallery.css') }}" />
 
 @include('nav.galleryNav')
@@ -14,9 +10,7 @@ $infos = DB::table('studentLiaInfo')->get();
         <a href="{{ route('student.detail', ['studentId' => $student->id]) }}">
             <div class="profilePicture">BILDHÄR</div>
             <div class="firstDescriptionRow">
-                @foreach ($infos as $info)
-                <p class="studentWUorDD subtitle1"> {{ $info->study }} </p>
-                @endforeach
+                <p class="studentWUorDD subtitle1"> {{ $studentInfos[$student->id]->study ?? 'N/A' }} </p>
                 <p> SKILLS </p>
             </div>
             <div class="secondDescriptionRow">
@@ -25,7 +19,6 @@ $infos = DB::table('studentLiaInfo')->get();
             </div>
         </a>
     </div>
-
     @endforeach
 </div>
 
