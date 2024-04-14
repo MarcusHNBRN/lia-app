@@ -102,7 +102,7 @@ main {
     padding: 62px 20px;
 }
 
-.areYouInterested h1, .areYouInterested p {
+.areYouInterested h4, .areYouInterested p {
     color: var(--white);
 }
 
@@ -121,7 +121,7 @@ main {
 }
 
 .companyGalleryButtonSecond .buttonSecond {
-    color: var(--white); 
+    color: var(--white);
     border: 1px solid var(--white);
 }
 

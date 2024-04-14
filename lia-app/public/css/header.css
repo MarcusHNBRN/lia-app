@@ -1,5 +1,5 @@
 :root {
-    --blue: #001A52;
+    --blue: #001a52;
     --red: #f52a3b;
     --white: #ffffff;
     --black: #000000;
@@ -10,6 +10,69 @@
     padding: 0;
 }
 
+/**Font-styling for ALL text on site**/
+.inter-AppFont {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+h5 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.18px;
+    line-height: 24px;
+}
+
+.body1 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+
+.body2 {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+}
+
+.buttonFont {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
+}
+
+.subtitle2 {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+}
+
+.captionFont {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    line-height: 16px;
+}
+
+@media (min-width:650px) { /*selma kolla rätt storlek*/
+
+}
+
+/*********/
 a:link {
     text-decoration: none;
 }
@@ -31,6 +94,7 @@ header {
     align-items: flex-end;
     justify-content: center;
 
+    font-family: "Inter", sans-serif;
     width: 100%;
     height: 112px;
     background-color: var(--red);

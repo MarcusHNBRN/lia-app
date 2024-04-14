@@ -48,12 +48,10 @@ footer {
     flex-direction: column;
     gap:12px;
     text-align: left;
-    font-size: 16px;
 }
 
 .footerCopy {
     text-align: left;
-    font-size: 16px;
 }
 
 @media (min-width:800px) {
