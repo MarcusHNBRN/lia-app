@@ -1,5 +1,8 @@
 @include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
+@if(Auth::guard('student')->check())
+<a href="{{ route('student.profile.edit', ['id' => Auth::guard('student')->user()->id]) }}">Edit</a>
+@endif
 
 <div class="profile">
 

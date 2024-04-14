@@ -73,7 +73,7 @@
                     <span>Engelska</span>
                 </label>
                 <label class="radio-button">
-                    <input type="radio" name="emplyees" value="swedish" required>
+                    <input type="radio" name="language" value="swedish" required>
                     <span>Svenska</span>
                 </label>
             </div>
