@@ -15,12 +15,12 @@ $infos = DB::table('studentLiaInfo')->get();
             <div class="profilePicture">BILDHÄR</div>
             <div class="firstDescriptionRow">
                 @foreach ($infos as $info)
-                <h3 class="studentWUorDD"> {{ $info->study }} </h3>
+                <p class="studentWUorDD subtitle1"> {{ $info->study }} </p>
                 @endforeach
                 <p> SKILLS </p>
             </div>
             <div class="secondDescriptionRow">
-                <h1 class="studentName"> {{ $student->studentName }} </h1>
+                <h5 class="studentName"> {{ $student->studentName }} </h5>
                 <p class="studentAge"> 22 </p>
             </div>
         </a>

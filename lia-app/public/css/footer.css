@@ -1,3 +1,10 @@
+:root {
+    --blue: #001A52;
+    --red: #f52a3b;
+    --white: #ffffff;
+    --black: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +15,8 @@ footer {
     justify-content: center;
     align-items: center;
 
-    background-color: #ffffff;
-    color: black;
+    background-color: var(--white);
+    color: var(--black);
     left: 0;
     bottom: 0;
     width: 100%;
@@ -41,12 +48,10 @@ footer {
     flex-direction: column;
     gap:12px;
     text-align: left;
-    font-size: 16px;
 }
 
 .footerCopy {
     text-align: left;
-    font-size: 16px;
 }
 
 @media (min-width:800px) {
