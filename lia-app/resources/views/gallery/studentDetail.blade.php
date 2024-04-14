@@ -4,7 +4,7 @@
 
 <div class="backButton"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
 
-<div class="studentBasicInfo">
+<div class="basicInfo">
     <div class="studentDetailPicture"> Bild här </div>
     <h4 class="studentDetailName"> {{ $student->studentName }} </h4>
     <h3 class="studentDetailStudy">

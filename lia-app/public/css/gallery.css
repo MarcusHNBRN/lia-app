@@ -103,7 +103,7 @@ body {
     border: 2px solid var(--black);
 }
 /*detaljsida*/
-.studentBasicInfo {
+.basicInfo {
     display: flex;
     align-items: center;
     justify-content: center;
