@@ -1,12 +1,11 @@
-$(document).ready(function(){
-    $('.signIn').click(function(){
-        $('.loginNav').toggle('slow');
+$(document).ready(function () {
+    $(".signIn").click(function () {
+        $(".loginNav").toggle("slow");
     });
 });
 
-
 function slideToggle(target, duration = 500) {
-    if (window.getComputedStyle(target).display === 'none') {
+    if (window.getComputedStyle(target).display === "none") {
         return slideDown(target, duration);
     } else {
         return slideUp(target, duration);
@@ -28,6 +27,6 @@ function slideDown(target, duration) {
     target.style.transitionDuration = duration + "ms";
 }
 
-document.querySelector('.signIn').addEventListener('click', function() {
+document.querySelector(".signIn").addEventListener("click", function () {
     slideToggle(document.getElementById("loginForm"), 500);
 });

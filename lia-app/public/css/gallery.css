@@ -3,7 +3,7 @@
     --red: #f52a3b;
     --white: #ffffff;
     --black: #000000;
-    --cardShadow: rgba(219,219,219,255);
+    --cardShadow: rgba(224,224,224,255);
 }
 
 body {
@@ -12,20 +12,47 @@ body {
 
 /** Filtrera och sökning **/
 .studentOptions {
-    height: 150px;
-    padding: 1.5rem;
+
+
 }
 
 .backButton {
-    margin-top: 10px;
-    margin-bottom: 35px;
-    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-left: 16px;
+    height: 64px;
 }
 
-.filters {
+.filterContainer {
     display: flex;
-    justify-content: space-between;
-    gap: 10%;
+    padding-bottom: 28px;
+}
+
+.filterItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    width: 100%;
+    padding-left: 12px;
+    max-width: 427px;
+}
+
+@media (min-width:427px) {
+    .filterContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filterItems {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 }
 
 .filterBar,
@@ -34,42 +61,41 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 0.6rem;
-    border-radius: 35px;
     border: 2px solid var(--black);
 }
 
 .filterBar {
-    /*selma fixa text overflow*/
-    gap: 5%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 299px;
+    max-width: 299px;
+    border-radius: 50px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 24px;
+}
+
+.filterButton {
+    padding:4px;
+    border-radius: 50%;
+    width: calc(48px - 8px);
+    height: calc(48px - 8px);
 }
 
 /** ELEVGALLERIET / STUDENT GALLERY **/
 .studentMain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    margin-top: 10%;
+    padding: 12px 32px;
 }
 
-.profileCard {
-    display: flex;
-    /*justify-content: space-between;*/
-    flex-direction: column;
-
-    gap: 50%;
-    border-radius: 10px;
+.studentCard {
     /*border-bottom: 30px solid var(--cardShadow);   selma*/
-    padding: 1rem;
-    width: 90%;
+    margin-bottom: 32px;
     max-height: 300px;
-    background-color: lightgreen;
 }
 
 .profilePicture {
@@ -78,29 +104,18 @@ body {
     justify-content: center;
 }
 
-.firstDescriptionRow {
-    display: flex;
-    justify-content: space-between;
-}
-
 .studentWUorDD {
     display: flex;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
 }
 
-.secondDescriptionRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.firstDescriptionRow, .secondDescriptionRow {
-    padding-left: 12px;
-    padding-right: 12px;
+.compFirstDescriptionRow,
+.compSecondDescriptionRow {
     padding-top: 8px;
 }
 
 .studentName {
+    padding-bottom: 16px;
 }
 
 .studentAge {
@@ -114,7 +129,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: bisque;
 }
 
 .studentDetailPicture {
@@ -126,7 +140,6 @@ body {
     height: 300px;
     border-radius: 50%;
     margin-bottom: 24px;
-    background-color: aqua;
 }
 
 .studentDetailName {
@@ -157,7 +170,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    background-color: aquamarine;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 10px;
@@ -180,29 +192,13 @@ body {
 
 /** FÖRETAGSGALLERIET / COMPANY GALLERY **/
 .companyMain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
     padding: 12px 24px;
-    background-color: aqua;
-    margin-top: 10%;
 }
 
 .companyCard {
-    display: flex;
-    /*justify-content: space-between;*/
-    flex-direction: column;
-
-    border-radius: 10px;
-
     margin-bottom: 24px;
-    width: 95%;
-    max-width: 369px;
+
     max-height: 300px;
-    overflow: hidden;
-    background-color: lightgreen;
 }
 
 .companyPicture {
@@ -246,7 +242,6 @@ body {
     justify-content: center;
     flex-direction: column;
 
-    background-color: lightgreen;
     max-width: 650px;
     min-width: 95%;
     padding: 10px;
@@ -293,7 +288,6 @@ body {
 }
 
 .about {
-    background-color: tomato;
     padding: 10px;
     margin-top: 32px;
 }
@@ -323,7 +317,18 @@ body {
     margin-top: 24px;
 }
 
+.companyAdress {
+    margin-bottom: 140px;
+}
+
 /*BOTH COMPANY AND STUDENTS / GEMENSAM DESIGN*/
+.companyMain, .studentMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .detailContactInfo {
     background-color: var(--blue);
     color: var(--white);
@@ -335,8 +340,32 @@ body {
     align-items: center;
 }
 
-.companyAdress {
-    margin-bottom: 140px;
+.galleryCard {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 369px;
+    width: 95%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px 2px var(--cardShadow);
+}
+
+.secondDescriptionRow, .compSecondDescriptionRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.firstDescriptionRow, .compFirstDescriptionRow {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 @media (min-width: 650px) {
@@ -354,7 +383,6 @@ body {
         margin-bottom: 24px;
         width: 369px;
         max-height: 300px;
-        background-color: lightgreen;
     }
 }
 

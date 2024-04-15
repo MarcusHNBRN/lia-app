@@ -6,7 +6,7 @@
 
 <div class="companyMain">
     @foreach ($companies as $company)
-    <div class="companyCard">
+    <div class="companyCard galleryCard">
         <a href="{{ route('company.detail', ['companyId' => $company->id]) }}">
             <div class="companyPicture"> @if($companyInfos[$company->id]->study === 'WU')
                 <img src="/img/Annons_bild_wu.png" alt="Webbutveckling" class="wuImage">
@@ -14,7 +14,7 @@
                 <img src="/img/Annons_bild_dd.png" alt="Digital Design" class="ddImage">
                 @endif
             </div>
-            <div class="firstDescriptionRow">
+            <div class="compFirstDescriptionRow">
                 <p class="companyName subtitle1"> {{ $company->companyName }} </p>
                 <p class="captionFont"> @if($companyInfos[$company->id]->study === 'WU')
                     CSS JavaScript HTML
@@ -23,7 +23,7 @@
                     @endif
                 </p>
             </div>
-            <div class="secondDescriptionRow">
+            <div class="compSecondDescriptionRow">
                 <h5 class="studentWUorDD">
                     @if ($companyInfos[$company->id]->study === 'WU')
                     Webbutvecklare
