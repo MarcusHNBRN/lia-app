@@ -8,6 +8,7 @@
 
 body {
     background-color: var(--white);
+    min-height: 100%;
 }
 
 /** Filtrera och sökning **/
@@ -399,6 +400,44 @@ body {
 
     padding-left: 12px;
     padding-right: 12px;
+}
+
+/** APPLYFORLIA PAGE / LIA-ANSLKNINGSSIDAN**/
+.applyContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 32px;
+    height: 100vh;
+}
+
+.applyContainer h4, .applyContainer img, .applyContainer p {
+    margin-bottom: 32px;
+}
+
+.applyLiaButtons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.applyLiaButtons p {
+    border: 1px solid var(--black);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.keepApply {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 8px 16px;
+    width: 146px;
+}
+
+.noApply {
+    padding: 8px 16px;
+    width: 214px;
 }
 
 @media (min-width: 650px) {

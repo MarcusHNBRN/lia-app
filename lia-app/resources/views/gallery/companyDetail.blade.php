@@ -29,7 +29,7 @@
             <h6>Om LIA:</h6>
             <p class="body2"> {{ $companyInfo->description }} </p> <!--selma-->
             <div class="aboutButtons">
-                <div class="applyForLia buttonFont">ANSÖK NU!</div>
+                <div class="applyForLia buttonFont"> <a href="{{ route('ApplyForLia', ['companyId' => $company->id]) }}"> ANSÖK NU! </a></div>
                 <div class="companyProfile buttonFont"> <a href="{{ route('company.profile', ['id' => Auth::guard('company')->user()->id]) }}"> FÖRETAGETS PROFIL </a></div> <!--selma kolla så det funkar-->
             </div>
 
