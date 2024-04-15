@@ -10,7 +10,7 @@
     <!---<p> {{ $email }} </p> --->
     <div class="applyLiaButtons">
         <p class="keepApply buttonFont"><a href="mailto:{{ $email }}">JAG ÄR SÄKER</a></p>
-        <p class="noApply buttonFont">NEJ JAG RÅKADE TRYCKA</p>
+        <p class="noApply buttonFont"> <a href="{{ url()->previous() }}"> NEJ JAG RÅKADE TRYCKA </a></p>
     </div>
 
     <div class="footerCopy captionFont">

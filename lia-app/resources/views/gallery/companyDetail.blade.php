@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/gallery.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
 
-<div class="backButton"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
+<div class="backButton"> <a href="{{ url()->previous() }}"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
 
 <div class="annons">
     <div class="annonsInfo">
