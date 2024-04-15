@@ -83,7 +83,12 @@ h5 {
 }
 
 @media (min-width:650px) { /*selma kolla rätt storlek*/
-
+    .desktop-subtitle2 {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        line-height: 20px;
+    }
 }
 
 /*********/
@@ -166,7 +171,7 @@ header {
 
 .loginForm {
     display: flex;
-    min-height: 400px; 
+    min-height: 400px;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -195,4 +200,81 @@ header {
     border: 1px solid var(--black);
     border-radius: 30px;
     padding: 8px 16px;
+}
+
+/* HIDDEN ON MOBILE */
+.desktop-headerContent {
+    display: none;
+}
+
+@media (min-width:650px) {
+    .desktop-headerContent {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+        background-color: var(--white);
+    }
+
+    .headerContent, .headerRight, .yrgoHeader{
+        display: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        font-family: "Inter", sans-serif;
+        height: 88px;
+        background-color: var(--white);
+    }
+
+    .desktop-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        padding-left: 64px;
+        width: 50%;
+    }
+
+    .desktop-links img, .desktop-links p {
+        cursor: pointer;
+    }
+
+    .desktop-svgsContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-right: 64px;
+        width: 145px;
+    }
+
+    .desktop-svgs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .desktop-profile, .desktop-logout {
+        display: flex;
+        flex-direction: column;
+
+        cursor: pointer;
+    }
+
+    .desktop-profile img, .desktop-logout img{
+        height: 24px;
+    }
+
+    .signIn {
+        color: var(--red);
+        border: 2px solid var(--red);
+    }
 }

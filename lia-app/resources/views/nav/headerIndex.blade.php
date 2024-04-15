@@ -21,11 +21,28 @@
                 </div>
             </div>
             <div class="headerLeft">
-                <div class="signIn"> LOG IN </div>
+                <div class="signIn"> LOGGA IN </div>
+            </div>
+        </div>
 
+
+        <div class="desktop-headerContent">
+            <div class="desktop-links">
+                <img src="/svgs/YRGO_logo_red.svg" alt="yrgo" class="desktop-yrgo">
+                <p class="desktop-subtitle2">LIA-Galleri</p>
+                <p class="desktop-subtitle2">Branch eventet</p>
+                <p class="desktop-subtitle2">Ledningsgruppen</p>
+                <p class="desktop-subtitle2">Om oss</p>
+            </div>
+            <div class="desktop-svgsContainer">
+                <div class="signIn"> LOGGA IN </div>
             </div>
         </div>
     </header>
+
+
+
+
 
     <div class="loginContainer">
         <div class="loginNav">
@@ -35,11 +52,11 @@
                     @csrf
                     <div class="loginFields body1">
                         <label for="email">E-mail *</label>
-                        <input name="email" id="email" type="email" placeholder="E-mail"/>
+                        <input name="email" id="email" type="email" placeholder="E-mail" />
                     </div>
                     <div class="loginFields body1">
                         <label for="password">Lösenord</label>
-                        <input name="password" id="password" type="password" placeholder="********"/>
+                        <input name="password" id="password" type="password" placeholder="********" />
                     </div>
                     <div class="buttonAndErrorField">
                         <button type="submit" class="loginButton buttonFont">Logga in</button>
