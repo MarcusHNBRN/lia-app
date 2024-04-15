@@ -249,7 +249,7 @@ body {
     display: inline-flex;
     align-items: flex-start;
     flex-direction: column;
-
+  
     max-width: 550px;
 }
     /*max-width: 650px;
@@ -354,6 +354,7 @@ body {
 
     margin-bottom: 140px;
 } */
+
 
 /*BOTH COMPANY AND STUDENTS / GEMENSAM DESIGN*/
 .companyMain, .studentMain {
