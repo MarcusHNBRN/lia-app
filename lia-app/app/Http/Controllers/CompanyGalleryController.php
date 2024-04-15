@@ -10,8 +10,18 @@ class CompanyGalleryController extends Controller
 {
     public function index()
     {
+        /*$companies = Company::all();
+        return view('gallery.companyGallery', compact('companies'));*/
+
         $companies = Company::all();
-        return view('gallery.companyGallery', compact('companies'));
+        $companyInfos = [];
+
+        foreach ($companies as $company) {
+            $companyInfo = CompanyInfo::where('companyId', $company->id)->first();
+            $companyInfos[$company->id] = $companyInfo;
+        }
+
+        return view('gallery.companyGallery', compact('companies', 'companyInfos'));
     }
 
     public function show($companyId)

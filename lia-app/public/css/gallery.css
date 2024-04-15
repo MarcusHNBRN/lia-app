@@ -1,8 +1,9 @@
 :root {
-    --blue: #001A52;
+    --blue: #001a52;
     --red: #f52a3b;
     --white: #ffffff;
     --black: #000000;
+    --cardShadow: rgba(219,219,219,255);
 }
 
 body {
@@ -27,7 +28,8 @@ body {
     gap: 10%;
 }
 
-.filterBar, .filterButton {
+.filterBar,
+.filterButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,14 +39,14 @@ body {
     border: 2px solid var(--black);
 }
 
-.filterBar { /*selma fixa text overflow*/
+.filterBar {
+    /*selma fixa text overflow*/
     gap: 5%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 299px;
 }
-
 
 /** ELEVGALLERIET / STUDENT GALLERY **/
 .studentMain {
@@ -61,12 +63,12 @@ body {
     /*justify-content: space-between;*/
     flex-direction: column;
 
-    gap:50%;
+    gap: 50%;
     border-radius: 10px;
-    border-bottom: 30px solid #dddddd;
+    /*border-bottom: 30px solid var(--cardShadow);   selma*/
     padding: 1rem;
     width: 90%;
-    max-height:300px;
+    max-height: 300px;
     background-color: lightgreen;
 }
 
@@ -79,12 +81,11 @@ body {
 .firstDescriptionRow {
     display: flex;
     justify-content: space-between;
-
-    margin-top: 1.5rem;
 }
 
 .studentWUorDD {
     display: flex;
+    padding-bottom: 16px;
 }
 
 .secondDescriptionRow {
@@ -93,8 +94,13 @@ body {
     align-items: center;
 }
 
-.studentName {
+.firstDescriptionRow, .secondDescriptionRow {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+}
 
+.studentName {
 }
 
 .studentAge {
@@ -103,7 +109,7 @@ body {
     border: 2px solid var(--black);
 }
 /*detaljsida*/
-.studentBasicInfo {
+.basicInfo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +125,7 @@ body {
     width: 300px; /*selma ändra till korrekt*/
     height: 300px;
     border-radius: 50%;
-    margin-bottom:24px;
+    margin-bottom: 24px;
     background-color: aqua;
 }
 
@@ -179,6 +185,8 @@ body {
     justify-content: center;
     flex-direction: column;
 
+    padding: 12px 24px;
+    background-color: aqua;
     margin-top: 10%;
 }
 
@@ -188,9 +196,12 @@ body {
     flex-direction: column;
 
     border-radius: 10px;
-    padding: 1rem;
-    width: 90%;
-    max-height:300px;
+
+    margin-bottom: 24px;
+    width: 95%;
+    max-width: 369px;
+    max-height: 300px;
+    overflow: hidden;
     background-color: lightgreen;
 }
 
@@ -198,21 +209,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.wuImage,
+.ddImage {
+    display: inline-block;
+
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .companyName {
-
 }
 
 .commpanySpots {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
-    gap: 3%;
     border: 2px solid var(--black);
-    border-radius: 35px;
-    padding: 0.8rem;
+    border-radius: 20px;
+    width: 67px;
+    height: 40px;
     color: red;
     font-size: 20px;
 }
@@ -245,7 +268,6 @@ body {
 }
 
 .lookingFor {
-
 }
 
 .dateAndPlace {
@@ -292,7 +314,8 @@ body {
     width: 194px;
 }
 
-.applyForLia, .companyProfile {
+.applyForLia,
+.companyProfile {
     padding: 13px;
     cursor: pointer;
     border-radius: 20px;
@@ -316,9 +339,22 @@ body {
     margin-bottom: 140px;
 }
 
-@media (min-width:600px) {
+@media (min-width: 650px) {
     .dateAndPlaceContent {
         width: 400px;
+    }
+
+    .companyCard {
+        display: flex;
+        /*justify-content: space-between;*/
+        flex-direction: column;
+
+        border-radius: 10px;
+
+        margin-bottom: 24px;
+        width: 369px;
+        max-height: 300px;
+        background-color: lightgreen;
     }
 }
 
