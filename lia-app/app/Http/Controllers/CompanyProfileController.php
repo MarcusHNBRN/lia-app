@@ -53,6 +53,7 @@ class CompanyProfileController extends Controller
 
         ]);
 
+
         if ($request->hasFile('profile_picture')) {
             $company->profile_picture = $this->storeFile($request->file('profile_picture'));
             $company->save();

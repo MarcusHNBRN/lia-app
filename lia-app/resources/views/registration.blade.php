@@ -8,8 +8,8 @@
         <p class="title"> Skapa konto som
         <p>
         <div class="buttons">
-            <button href="student" onclick="showStudentForm()"> Elev</button>
-            <button href="company" onclick="showCompanyForm()"> Företag</button>
+            <button href="student" class="buttonFont" onclick="showStudentForm()"> Elev</button>
+            <button href="company" class="buttonFont" onclick="showCompanyForm()"> Företag</button>
         </div>
     </div>
 </div>
@@ -37,3 +37,5 @@
         document.getElementById('company-form').style.display = 'none';
     });
 </script>
+
+@include('nav.footer')

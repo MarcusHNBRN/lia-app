@@ -196,6 +196,9 @@ input {
 .file-container {
     text-align: left;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #profile-picture-input,
@@ -235,4 +238,14 @@ input {
 
 .file-label[data-file-name] {
     white-space: normal;
+}
+
+@media only screen and (min-width: 992px) {
+    .card-container {
+        width: 826px;
+    }
+
+    input {
+        width: 794px;
+    }
 }

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
-<form method="POST" action="{{ route('registration.company.submit') }}">
+<form method="POST" action="{{ route('registration.company.submit') }}" enctype="multipart/form-data">
     @csrf
     <div class="form-container">
         <div class="input-container">
@@ -24,54 +24,54 @@
         </div>
 
         <div class="card-container">
-            <p class="title"> Klass </p>
+            <p class="title"> Bransch </p>
             <div class="industry-container">
                 <label class="industry-button">
                     <input type="radio" name="industry" value="Bilindustrin" required>
-                    <span>Bilindustrin</span>
+                    <span class="buttonFont">Bilindustrin</span>
                 </label>
 
                 <label class="industry-button">
                     <input type="radio" name="industry" value="Media och Kommunikation" required>
-                    <span>Media och Kommunikation</span>
+                    <span class="buttonFont">Media och Kommunikation</span>
                 </label>
                 <label class="industry-button">
                     <input type="radio" name="industry" value="Film och TV-Produktion" required>
-                    <span>Film och TV-Produktion</span>
+                    <span class="buttonFont">Film och TV-Produktion</span>
                 </label>
                 <label class="industry-button">
                     <input type="radio" name="industry" value="Annat" required>
-                    <span>Annat</span>
+                    <span class="buttonFont">Annat</span>
                 </label>
             </div>
         </div>
         <div class="card-container">
-            <p class="title"> Klass </p>
+            <p class="title"> Antal anställda </p>
             <div class="radio-button-container">
                 <label class="employees-button">
                     <input type="radio" name="employees" value="1-20" required>
-                    <span>1-20</span>
+                    <span class="buttonFont">1-20</span>
                 </label>
                 <label class="employees-button">
                     <input type="radio" name="employees" value="20-100" required>
-                    <span>20-100</span>
+                    <span class="buttonFont">20-100</span>
                 </label>
                 <label class="employees-button">
                     <input type="radio" name="employees" value="100+" required>
-                    <span>100+</span>
+                    <span class="buttonFont">100+</span>
                 </label>
             </div>
         </div>
         <div class="card-container">
-            <p class="title"> Klass </p>
+            <p class="title"> Vilket sptåk används i huvudsak på företaget? </p>
             <div class="radio-button-container">
                 <label class="language-button">
                     <input type="radio" name="language" value="english" required>
-                    <span>Engelska</span>
+                    <span class="buttonFont">Engelska</span>
                 </label>
                 <label class="language-button">
                     <input type="radio" name="language" value="swedish" required>
-                    <span>Svenska</span>
+                    <span class="buttonFont">Svenska</span>
                 </label>
             </div>
         </div>
@@ -91,7 +91,7 @@
             <div class="file-container">
                 <p class="file-title"> Profile Picture </p>
                 <input type="file" id="profile-picture-company-input" name="profile_picture" onchange="updateFileName('profile-picture-company-input')">
-                <label for="profile-picture-company-input" id="file-label">Choose File</label>
+                <label for="profile-picture-company-input" class="buttonFont" id="file-label">Choose File</label>
             </div>
         </div>
 
