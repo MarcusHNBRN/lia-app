@@ -1,37 +1,56 @@
 @include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
-@if(Auth::guard('student')->check())
-<a href="{{ route('company.profile.edit', ['id' => Auth::guard('company')->user()->id]) }}">Edit</a>
-@endif
-<div class="profile">
-    @if ($company->profile_picture)
-    <img src="data:image/jpeg;base64,{{ base64_encode($company->profile_picture) }}" alt="Company Logo" class="profile-picture">
-    @else
-    <p>No profile picture available</p>
-    @endif
+<div class="backButton"> <a href="{{ route('company_dashboard', ['id' => Auth::guard('company')->user()->id]) }}"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
 
-    <h1>{{ $company->companyName }}</h1>
-    <p>{{ $company->industry }}</p>
+
+<div class="profile">
+    <div class="edit-container">
+        <a href="{{ route('company.profile.edit', ['id' => Auth::guard('company')->user()->id]) }}"><img class="gear" src="/svgs/gear.svg" alt="gear"></a>
+    </div>
+    <div class="profile-picture-container">
+        @if ($company->profile_picture)
+        <img src="data:image/jpeg;base64,{{ base64_encode($company->profile_picture) }}" alt="Company Logo" class="profile-picture">
+        @else
+        <img src="/svgs/yrgo_logo_Y.svg" class="profile-picture" alt="Profile Picture">
+        @endif
+    </div>
+
+    <h3>{{ $company->companyName }}</h3>
+    <h4>{{ $company->industry }}</h4>
 
     <div class="profile-info">
         <div class="profile-card">
-            <p><strong>Description:</strong> {{ $company->description }}</p>
+            <h5>Om Företaget</h5>
+            <p class="body2"> {{ $company->description }}</p>
         </div>
 
-        @if ($company->linkedin)
         <div class="profile-card">
-            <button><a href="{{ $company->linkedin }}" class="btn btn-primary">LinkedIn</a></button>
-        </div>
-        @endif
-
-        @if ($company->homepage)
-        <div class="profile-card">
-            <button><a href="{{ $company->homepage }}" class="btn btn-primary">Homepage</a></button>
+            <h5>Vi erbjuder</h5>
         </div>
 
-        @if ($company->email)
-        <button> <a href="mailto:{{ $company->email }}" class="btn btn-primary"> {{ $company->email }} </a> </button>
-        @endif
-        @endif
+        <div class="card-container">
+            <div class="contact-card">
+                <h5>Kontaktuppgifter</h5>
+                <div class="top-row">
+                    @if ($company->homepage)
+                    <button><a href="{{ $company->homepage }}" class="buttonFont">Portfolio</a></button>
+                    @endif
+                    @if ($company->linkedin)
+                    <button><a href="{{ $company->linkedin }}" class="buttonFont">LinkedIn</a></button>
+                    @endif
+                </div>
+
+
+
+                <div class="mail">
+                    @if ($company->email)
+                    <button><a href="mailto:{{$company->email}}" class="buttonFont">{{ $company->email }}</a></button>
+                    @endif
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+</div>
+
+@include('nav.footer')

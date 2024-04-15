@@ -1,3 +1,4 @@
+@include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
 <form method="POST" action="{{ route('company.profile.update', ['id' => $company->id]) }}" enctype="multipart/form-data">
     @csrf
@@ -7,23 +8,34 @@
 
         <div class="card-container">
             <div class="file-container">
-                <p class="file-title"> Profile Picture </p>
+                <div class="file-title">
+                    <p class="body2"> Profile Picture </p>
+                </div>
                 <input type="file" id="profile-picture-input" name="profile_picture" onchange="updateFileName('profile-picture-input')">
                 <label for="profile-picture-input" id="file-label">Choose File</label>
             </div>
         </div>
 
         <div class="input-container">
-            <p class="input-title"> Company Name * </p>
+            <div class="input-title">
+                <p class="body2">Företagets Namn
+                <p>
+            </div>
             <input type="text" name="companyName" placeholder="Company Name" value="{{ $company->companyName }}" required>
         </div>
         <div class="input-container">
-            <p class="input-title"> Email * </p>
+            <div class="input-title">
+                <p class="body2">Email
+                <p>
+            </div>
             <input type="email" name="email" placeholder="Email" value="{{ $company->email }}" required>
         </div>
 
         <div class="input-container">
-            <p class="input-title"> Contact Person * </p>
+            <div class="input-title">
+                <p class="body2">Kontaktperson
+                <p>
+            </div>
             <input type="text" name="contactPerson" placeholder="Contact Person" value="{{ $company->contactPerson }}" required>
         </div>
         <div class="input-container">
@@ -35,69 +47,83 @@
             <textarea name="description" placeholder="Description" required>{{ $company->description }}</textarea>
         </div>
 
-        <div class="button-container">
-            <p class="title"> Klass
-            <p>
-            <div class="radio-button-container">
-                <label class="radio-button">
+        <div class="card-container">
+            <div class="title">
+                <p class="body2">Branch
+                <p>
+            </div>
+            <div class="industry-container">
+                <label class="industry-button">
                     <input type="radio" name="industry" value="Bilindustrin" {{ $company->industry == 'Bilindustrin' ? 'checked' : '' }}>
-                    <span>Bilindustrin</span>
+                    <span class="buttonFont">Bilindustrin</span>
                 </label>
-                <label class="radio-button">
+
+                <label class="industry-button">
                     <input type="radio" name="industry" value="Media och Kommunikation" {{ $company->industry == 'Media och Kommunikation' ? 'checked' : '' }}>
-                    <span>Media och Kommunikation</span>
+                    <span class="buttonFont">Media och Kommunikation</span>
                 </label>
-                <label class="radio-button">
+                <label class="industry-button">
                     <input type="radio" name="industry" value="Film och TV-Produktion" {{ $company->industry == 'Film och TV-Produktion' ? 'checked' : '' }}>
-                    <span>Film och TV-Produktion</span>
+                    <span class="buttonFont">Film och TV-Produktion</span>
                 </label>
-                <label class="radio-button">
+                <label class="industry-button">
                     <input type="radio" name="industry" value="Annat" {{ $company->industry == 'Annat' ? 'checked' : '' }}>
-                    <span>Annat</span>
+                    <span class="buttonFont">Annat</span>
                 </label>
             </div>
         </div>
-        <div class="button-container">
-            <p class="title"> Klass
-            <p>
+        <div class="card-container">
+            <div class="title">
+                <p class="body2">Antal anställda
+                <p>
+            </div>
             <div class="radio-button-container">
-                <label class="radio-button">
+                <label class="employees-button">
                     <input type="radio" name="employees" value="1-20" {{ $company->employees == '1-20' ? 'checked' : '' }}>
-                    <span>1-20</span>
+                    <span class="buttonFont">1-20</span>
                 </label>
-                <label class="radio-button">
+                <label class="employees-button">
                     <input type="radio" name="employees" value="20-100" {{ $company->employees == '20-100' ? 'checked' : '' }}>
-                    <span>20-100</span>
+                    <span class="buttonFont">20-100</span>
                 </label>
-                <label class="radio-button">
+                <label class="employees-button">
                     <input type="radio" name="employees" value="100+" {{ $company->employees == '100+' ? 'checked' : '' }}>
-                    <span>100+</span>
+                    <span class="buttonFont">100+</span>
                 </label>
             </div>
         </div>
 
-        <div class="button-container">
-            <p class="title"> Klass
-            <p>
+        <div class="card-container">
+            <div class="title">
+                <p class="body2">Vilket språk används i huvudsak på företaget?
+                <p>
+            </div>
             <div class="radio-button-container">
-                <label class="radio-button">
-                    <input type="radio" name="language" value="english" {{ $company->language == 'english' ? 'checked' : '' }}>
-                    <span>Engelska</span>
+                <label class="language-button">
+                    <input type="radio" name="language" value="english" {{ $company->language == 'english' ? 'checked' : '' }}">
+                    <span class="buttonFont">Engelska</span>
                 </label>
-                <label class="radio-button">
+                <label class="language-button">
                     <input type="radio" name="language" value="swedish" {{ $company->language == 'swedish' ? 'checked' : '' }}>
-                    <span>Svenska</span>
+                    <span class="buttonFont">Svenska</span>
                 </label>
             </div>
         </div>
+
 
         <div class="input-container">
-            <p class="input-title"> Länk till företagets Linkdin </p>
+            <div class="input-title">
+                <p class="body2">Länk till din Linkdin
+                <p>
+            </div>
             <input type="url" name="linkedin" placeholder="Länk till din Linkdin" value="{{ $company->linkedin }}">
         </div>
 
         <div class="input-container">
-            <p class="input-title"> länk till företagets hemsida </p>
+            <div class="input-title">
+                <p class="body2">länk till företagets hemsida
+                <p>
+            </div>
             <input type="url" name="homepage" placeholder="Länk till din hemsida" value="{{ $company->homepage }}">
         </div>
         <button type="submit">Update</button>
@@ -105,3 +131,5 @@
 </form>
 
 <script src="{{ asset('js/registration.js') }}"></script>
+
+@include('nav.footer')
