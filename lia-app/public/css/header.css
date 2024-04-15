@@ -89,6 +89,20 @@ h5 {
         letter-spacing: 0.5px;
         line-height: 20px;
     }
+
+    .desktop-h1-bold {
+        font-family: "Inter", sans-serif;
+        font-size: 96px;
+        line-height: 100px;
+        font-weight: 900;
+    }
+
+    .desktop-h1-thin {
+        font-family: "Inter", sans-serif;
+        font-size: 96px;
+        line-height: 100px;
+        font-weight: 100;
+    }
 }
 
 /*********/
