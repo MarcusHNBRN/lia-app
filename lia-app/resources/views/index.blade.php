@@ -41,7 +41,7 @@
     </div>
 
     <br><br><br><br>
-    <form method="POST" action="{{ route('login.submit') }}">
+    <!------<form method="POST" action="{{ route('login.submit') }}">
         @csrf
         <div>
             <label for="email">Email</label>
@@ -65,7 +65,7 @@
         @if (session('error'))
         <div>{{ session('error') }}</div>
         @endif
-    </form>
+    </form> ----------->
 
     <!-- Tillfälliga länkar så jag kommer åt sidorna: -->
     <br>
