@@ -11,6 +11,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\StudentProfileController;
 use App\Http\Controllers\CompanyProfileController;
 use App\Http\Controllers\IntegrityController;
+use App\Http\Controllers\ApplyForLiaController;
 
 
 
@@ -39,6 +40,7 @@ Route::get('/student/{studentId}', [StudentGalleryController::class, 'show'])->n
 
 Route::get('/companyGallery', [CompanyGalleryController::class, 'index'])->name('company.gallery');
 Route::get('/company/{companyId}', [CompanyGalleryController::class, 'show'])->name('company.detail');
+Route::get('/applyForLia/{companyId}', [ApplyForLiaController::class, 'ApplyForLia'])->name('ApplyForLia');
 
 /** Profiles */
 Route::get('/profile/student/{id}', [StudentProfileController::class, 'show'])->name('student.profile');
