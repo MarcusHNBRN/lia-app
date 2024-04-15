@@ -21,11 +21,11 @@
             <div class="radio-button-container">
                 <label class="study-button">
                     <input type="radio" name="study" value="WU" required>
-                    <span>WU</span>
+                    <span class="buttonFont">WU</span>
                 </label>
                 <label class="study-button">
                     <input type="radio" name="study" value="DD" required>
-                    <span>DD</span>
+                    <span class="buttonFont">DD</span>
             </div>
         </div>
 
@@ -66,7 +66,7 @@
             <div class="file-container">
                 <p class="file-title"> Ladda up dit cv </p>
                 <input type="file" id="cv-file-input" name="CV" onchange="updateFileName('cv-file-input')">
-                <label for="cv-file-input" id="file-label">Choose File</label>
+                <label for="cv-file-input" class="buttonFont" id="file-label">Choose File</label>
             </div>
         </div>
 
@@ -74,7 +74,7 @@
             <div class="file-container">
                 <p class="file-title"> Profile Picture </p>
                 <input type="file" id="profile-picture-input" name="profile_picture" onchange="updateFileName('profile-picture-input')">
-                <label for="profile-picture-input" id="file-label">Choose File</label>
+                <label for="profile-picture-input" class="buttonFont" id="file-label">Choose File</label>
             </div>
         </div>
 

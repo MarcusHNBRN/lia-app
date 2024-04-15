@@ -41,7 +41,7 @@ class CompanyController extends Controller
         try {
             $validatedData = $request->validate([
                 'companyName' => 'required|string',
-                'email' => 'required|email|unique:companies,companyEmail',
+                'email' => 'required|email|unique:companies,email',
                 'contactPerson' => 'required|string',
                 'phone' => 'nullable|string',
                 'description' => 'required|string',

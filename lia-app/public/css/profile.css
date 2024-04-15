@@ -4,6 +4,11 @@
     --faded: #e4e9eb;
     --onyx: #333333;
 }
+
+main {
+    gap: 16px;
+}
+
 .profile {
     display: flex;
     flex-direction: column;
@@ -12,30 +17,111 @@
     margin-top: 50px;
 }
 
-.profile-card {
-    width: 369px;
-    padding: 24px;
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
-.contact-card {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
+.profile-card {
     width: 369px;
-    height: 176px;
-    background-color: var(--secondary);
-    border-radius: 10px;
+    padding: 16px;
+    gap: 16px;
 }
 
 button {
     background-color: white;
-    width: 103px;
+    width: 160px;
     height: 32px;
     border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    color: var(--onyx);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.profile-picture-container {
+    width: 264px;
+    height: 264px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
-    width: 264px;
-    height: 264px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-card {
+    width: 184px;
+    padding: 8px;
+}
+
+.mail {
+    align-items: center;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 369px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    gap: 16px;
+    padding: 16px;
+}
+
+.contact-card h5 {
+    color: white;
+}
+
+.contact-card button {
+    width: 160px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.mail button {
+    width: 320px;
+}
+
+.title {
+    text-align: left;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.edit-container {
+    text-align: right;
+    min-width: 75%;
 }

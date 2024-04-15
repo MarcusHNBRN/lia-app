@@ -1,3 +1,4 @@
+@include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
 <form method="POST" action="{{ route('student.profile.update', ['id' => $student->id]) }}" enctype="multipart/form-data">
     @csrf
@@ -12,7 +13,7 @@
             <div class="file-container">
                 <p class="file-title"> Profile Picture </p>
                 <input type="file" id="profile-picture-input" name="profile_picture" onchange="updateFileName('profile-picture-input')">
-                <label for="profile-picture-input" id="file-label">Choose File</label>
+                <label for="profile-picture-input" class="buttonFont" id="file-label">Choose File</label>
             </div>
         </div>
 
@@ -29,17 +30,17 @@
             <p class="input-title"> Telefonnummer * </p>
             <input type="tel" name="phone" placeholder="Telefonnummer" value="{{ $student->phone }}" required>
         </div>
-        <div class=" button-container">
+        <div class="card-container">
             <p class="title"> Klass
             <p>
             <div class="radio-button-container">
-                <label class="radio-button">
+                <label class="study-button">
                     <input type="radio" name="study" value="WU" required>
-                    <span>WU</span>
+                    <span class="buttonFont">WU</span>
                 </label>
-                <label class="radio-button">
+                <label class="study-button">
                     <input type="radio" name="study" value="DD" required>
-                    <span>DD</span>
+                    <span class="buttonFont">DD</span>
             </div>
         </div>
 
@@ -76,9 +77,11 @@
 
         <div class="card-container">
             <div class="file-container">
-                <p class="file-title"> Ladda up dit cv </p>
+                <div class="file-title">
+                    <p class="body2"> Ladda upp ditt CV </p>
+                </div>
                 <input type="file" id="cv-file-input" name="CV" onchange="updateFileName('cv-file-input')">
-                <label for="cv-file-input" id="file-label">Choose File</label>
+                <label for="cv-file-input" class="buttonFont" id="file-label">Choose File</label>
             </div>
         </div>
 
@@ -87,3 +90,5 @@
 </form>
 
 <script src="{{ asset('js/registration.js') }}"></script>
+
+@include('nav.footer')
