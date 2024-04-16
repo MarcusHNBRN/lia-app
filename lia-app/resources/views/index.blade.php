@@ -16,6 +16,21 @@
         </div>
     </div>
 
+    <div class="desktop-container">
+        <div class="desktop-welcome">
+            <h1 class="desktop-h1-bold">Välkommen till Yrgos lia portal</h1>
+            <h1 class="desktop-h1-thin">Välj en Lia plats som leder till jobb</h1>
+            <div>
+                <div class="desktop-button">
+                    skapa konto
+                </div>
+                <div class="desktop-button">
+                    skapa konto
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="branscheventContainer">
         <h4>Branschevent <br> WU+DD 2024</h4>
         <h5>24 april kl 15:00</h5>
@@ -41,7 +56,7 @@
     </div>
 
     <br><br><br><br>
-    <form method="POST" action="{{ route('login.submit') }}">
+    <!------<form method="POST" action="{{ route('login.submit') }}">
         @csrf
         <div>
             <label for="email">Email</label>
@@ -65,7 +80,7 @@
         @if (session('error'))
         <div>{{ session('error') }}</div>
         @endif
-    </form>
+    </form> ----------->
 
     <!-- Tillfälliga länkar så jag kommer åt sidorna: -->
     <br>
