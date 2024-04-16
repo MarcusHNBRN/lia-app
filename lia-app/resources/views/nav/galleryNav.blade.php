@@ -1,7 +1,7 @@
 <div class="studentOptions">
     <div class="backButton"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
 
-    <div class="filterContainer"> <!-- selma fixa route/rätt länk -->
+    <div class="filterContainer"> 
         <div class="filterItems">
             <div class="filterBar subtitle2">
                 <div class="searchBar">

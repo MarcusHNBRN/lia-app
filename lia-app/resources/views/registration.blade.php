@@ -1,9 +1,9 @@
-@include('nav.header')
+@include('nav.headerIndex')
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
-<div class="backButton"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
+<div class="backButton" style="margin-left: 8%; margin-top:10px"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
 
 <div class="choice-container">
-    <h1> Skapa konto </h1>
+    <h2 class="desktop-h2"> Skapa konto </h2>
     <div class="button-container">
         <p class="title"> Skapa konto som
         <p>

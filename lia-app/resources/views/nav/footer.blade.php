@@ -3,7 +3,7 @@
 <footer>
     <div class="footerContent">
         <div class="yrgoFooter"> <img src="/svgs/YRGO_logo_red.svg" alt="yrgo">
-        </div> <!--selma aligna-->
+        </div> 
         <div class="footerLinks">
             <div class="footerLeft">
                 <p class="body2">Kontakt</p>
