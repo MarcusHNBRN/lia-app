@@ -277,6 +277,7 @@ main {
         flex-wrap: wrap;
         flex-direction: row;
 
+        margin-bottom: 128px;
         gap: 32px;
         height: 356px;
         margin-top: 64px;
