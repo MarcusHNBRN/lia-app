@@ -31,6 +31,7 @@
                 <a href="/">
                 <img src="/svgs/YRGO_logo_red.svg" alt="yrgo" class="desktop-yrgo"> </a>
                 <p class="desktop-subtitle2">LIA-Galleri</p>
+                <p class="desktop-subtitle2"> <a href="{{ route('student.gallery') }}"> Elev-Galleri </a> </p>
                 <p class="desktop-subtitle2">Branch eventet</p>
                 <p class="desktop-subtitle2">Ledningsgruppen</p>
                 <p class="desktop-subtitle2">Om oss</p>
