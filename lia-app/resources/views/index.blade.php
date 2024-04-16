@@ -61,13 +61,6 @@
         <img src="/img/Desktop_Image_Index.png" alt="yrgo" class="desktop-image">
     </div>
 
-    <br>
-    <form action="{{ route('student.gallery') }}" method="GET">
-        <button type="submit">elever</button>
-    </form>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
 </main>
 
 @include('errors')
