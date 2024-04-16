@@ -24,6 +24,6 @@ class CompanyInfo extends Model
     use HasFactory;
     public function company()
     {
-        return $this->belongsTo(company::class);
+        return $this->belongsTo(Company::class);
     }
 }

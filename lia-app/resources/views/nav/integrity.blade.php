@@ -6,7 +6,7 @@
         <div class="backButton"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
 
         <h2>Integritetspolicy</h2>
-        <p>Denna integritetspolicy beskriver hur [YRGO] (”Företaget”, ”vi”, ”oss”) samlar in, lagrar och använder dina personuppgifter. Vi är måna om att skydda din integritet och att behandla dina personuppgifter på ett ansvarsfullt och lagligt sätt.</p>
+        <p>Denna integritetspolicy beskriver hur Lia Portalen samlar in, lagrar och använder dina personuppgifter. Vi är måna om att skydda din integritet och att behandla dina personuppgifter på ett ansvarsfullt och lagligt sätt.</p>
 
         <div class="blueContent">
             <p>Personuppgifter vi samlar in

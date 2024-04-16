@@ -107,11 +107,11 @@
             <p class="title"> Klass </p>
             <div class="radio-button-container">
                 <label class="language-button">
-                    <input type="radio" name="study" value="Webbutvecklare" required>
+                    <input type="radio" name="study" value="WU" required>
                     <span>Webbutvecklare</span>
                 </label>
                 <label class="language-button">
-                    <input type="radio" name="study" value="Digital Designer" required>
+                    <input type="radio" name="study" value="DD " required>
                     <span>Digital Designer</span>
                 </label>
             </div>
@@ -139,7 +139,7 @@
 
         <div class="input-container">
             <p class="input-title">Antal platser</p>
-            <select id="availableSpots">
+            <select id="availableSpots" name="availableSpots">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
