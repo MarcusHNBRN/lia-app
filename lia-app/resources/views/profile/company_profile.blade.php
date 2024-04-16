@@ -27,6 +27,9 @@
 
             <div class="profile-card">
                 <h5>Vi erbjuder</h5>
+                @if ($company->offer)
+                <p class="body2"> {{ $company->offer }}</p>
+                @endif
             </div>
 
             <div class="card-container">
@@ -53,5 +56,4 @@
         </div>
     </div>
 </main>
-<script src="{{ asset('js/sidenav.js') }}"></script>
 @include('nav.footer')
