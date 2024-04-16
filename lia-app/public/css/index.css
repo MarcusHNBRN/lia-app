@@ -86,6 +86,10 @@ main {
     padding: 62px 20px;
 }
 
+.branscheventContainer h4, .branscheventContainer h5 {
+    margin-bottom: 16px;
+}
+
 .branscheventContainer h2 {
     margin-top: 16px;
     margin-bottom: 16px;
@@ -96,7 +100,7 @@ main {
     height: 244px;
 }
 
-.ledningsgruppen h2 {
+.ledningsgruppen h5 {
     margin-top: 32px;
     margin-bottom: 32px;
 }

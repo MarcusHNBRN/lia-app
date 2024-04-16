@@ -1,4 +1,9 @@
+@auth
 @include('nav.header')
+@else
+@include('nav.headerIndex')
+@endauth
+
 <p>Hello, {{ $user->name }}!</p>
 <a href="{{ route('logout') }}">Logout</a>
 <div>

@@ -1,4 +1,9 @@
+@auth
+@include('nav.header')
+@else
 @include('nav.headerIndex')
+@endauth
+
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
 
 <div class="backButton"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>

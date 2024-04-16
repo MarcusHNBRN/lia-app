@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+@auth
 @include('nav.header')
+@else
+@include('nav.headerIndex')
+@endauth
 </header>
 
 <main>
