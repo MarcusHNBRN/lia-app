@@ -136,10 +136,15 @@ body {
     align-items: center;
     justify-content: center;
 
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    border-radius: 50px;
     margin-bottom: 24px;
+}
+
+.studentDetailPicture img {
+    width: 250px;
+    height: auto;
+    max-height: 250px;
+    border-radius: 50%;
 }
 
 .studentDetailName {
@@ -466,5 +471,42 @@ body {
         margin-bottom: 64px;
         width: 369px;
         max-height: 300px;
+    }
+
+    .studentMoreInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .firstThreeItems {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        width: 842px;
+        max-width: 65%;
+        margin-bottom: 64px;
+        padding: 32px 64px;
+    }
+
+    .lastTwoItems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 128px;
+        width: 673%;
+        max-width: 45%;
+        padding: 62px;
+        border-radius: 20px;
+        color: var(--white);
+        background-color: var(--blue);
+    }
+
+    .lastTwoItems h5 {
+        margin-bottom: 16px;
     }
 }

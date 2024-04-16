@@ -1,8 +1,4 @@
-@auth
 @include('nav.header')
-@else
-@include('nav.headerIndex')
-@endauth
 
 <h1>{{ $profileType }} Profile</h1>
     @if ($profileType === 'Student')

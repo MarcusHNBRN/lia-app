@@ -1,9 +1,4 @@
-@guest
 @include('nav.header')
-@else
-    @include('nav.headerIndex')
-@endguest
-
 
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/registrering.css') }}" />

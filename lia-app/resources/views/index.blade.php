@@ -1,8 +1,5 @@
-@auth
-@include('nav.header')
-@else
 @include('nav.headerIndex')
-@endauth
+
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
 
 
