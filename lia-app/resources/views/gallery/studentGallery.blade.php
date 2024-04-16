@@ -40,7 +40,7 @@
             <div class="secondDescriptionRow">
                 <h5 class="studentName"> {{ $student->studentName }} </h5>
                 <div style="padding-bottom: 16px;">
-                    <!--- <p class="studentAge"> 22 </p> --->
+                    <!-- <p class="studentAge"> 22 </p> --->
                 </div>
             </div>
         </a>
