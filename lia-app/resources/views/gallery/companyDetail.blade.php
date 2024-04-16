@@ -27,10 +27,17 @@
 
         <div class="about">
             <h6>Om LIA:</h6>
-            <p class="body2"> {{ $companyInfo->description }} </p> <!--selma-->
+            <p class="body2"> {{ $companyInfo->description }} </p>
             <div class="aboutButtons">
                 <div class="applyForLia buttonFont"> <a href="{{ route('ApplyForLia', ['companyId' => $company->id]) }}"> ANSÖK NU! </a></div>
-                <div class="companyProfile buttonFont"> <a href="{{ route('company.profile', ['id' => Auth::guard('company')->user()->id]) }}"> FÖRETAGETS PROFIL </a></div> <!--selma kolla så det funkar-->
+                <div class="companyProfile buttonFont">
+                    @auth
+                    <a href="{{ route('company.profile', ['id' => Auth::guard('company')->user()->id]) }}">FÖRETAGETS PROFIL</a>
+                    @endauth
+                    <a href="/">
+                    LOGGA IN FÖR INFO </a>
+                </div>
+                <!--selma kolla så det funkar-->
             </div>
 
             <h5 class="aboutTitles">Dina arbetsuppgifter</h5>

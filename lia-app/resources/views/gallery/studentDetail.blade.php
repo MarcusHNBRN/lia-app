@@ -15,11 +15,11 @@
         @else
         N/A
         @endif </h3>
-    <h5 class="studentDetailCity"> stad? </h5>
+    <!---<h5 class="studentDetailCity"> stad? </h5> --->
     <h4 class="studentDetailAge"> 22 </h4>
 </div>
 
-<div class="studentMoreInfo"> <!-- selma om det inte är inlagt? -->
+<div class="studentMoreInfo">
     <div class="firstThreeItems">
         <div class="infoContainer">
             <h5 class="infoTitles">Om mig</h5>
@@ -50,7 +50,27 @@
     </div>
 </div>
 
-@include('nav.galleryDetailContact')
+<div class="card-container">
+            <div class="contact-card">
+                <h5>Kontaktuppgifter</h5>
+                <div class="top-row">
+                    @if ($student->linkedin)
+                    <button><a href="{{ $student->homepage }}" class="buttonFont">Portfolio</a></button>
+                    @endif
+                    @if ($student->email)
+                    <button><a href="{{ $student->linkedin }}" class="buttonFont">LinkedIn</a></button>
+                    @endif
+                </div>
+
+
+
+                <div class="mail">
+                    @if ($student->email)
+                    <button><a href="mailto:{{$student->email}}" class="buttonFont">{{ $student->email }}</a></button>
+                    @endif
+                </div>
+            </div>
+        </div>
 
 <!---<div class="studentContactInfo">
     <h1>Kontaktuppgifter</h1>

@@ -70,6 +70,8 @@ main {
     background: none;
     border: none;
     outline: inherit;
+
+    cursor: pointer;
 }
 
 .createAccountButton,
