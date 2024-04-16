@@ -5,7 +5,7 @@
     --onyx: #333333;
 }
 
-main {
+.main-registration {
     gap: 16px;
 }
 
@@ -61,12 +61,18 @@ button:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-bottom: 16px;
 }
 
 .profile-picture {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: 50%;
+}
+
+.defualt-picture {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
 }
 
@@ -129,6 +135,45 @@ ul {
 }
 
 .edit-container {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     min-width: 75%;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 16px;
+}
+
+.edit-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    width: 369px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    gap: 16px;
+    padding: 16px;
+    gap: 16px;
+    margin-bottom: 16px;
+    color: var(--white);
+}
+
+.name-container {
+    text-align: center;
+}
+
+h4,
+h3 {
+    margin-bottom: 16px;
+}
+
+.selectfont {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    line-height: 16px;
 }
