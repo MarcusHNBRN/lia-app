@@ -335,8 +335,7 @@ header {
     }
 
     .loginNav {
-        color: var(--red);
-        color: var(--white);
+        background-color: var(--red);
         width: 100vw;
         top:0;
     }
@@ -345,6 +344,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: var(--white);
     }
 
     .loginForm {
@@ -355,10 +355,13 @@ header {
 
     .loginFields {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
         margin-top:60px;
     }
+
 
     .desktop-login-fields {
         display: flex;
