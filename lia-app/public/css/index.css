@@ -159,10 +159,6 @@ main {
 }
 
 @media (min-width: 650px) {
-    .welcomeContainer {
-        display: none;
-    }
-
     .desktop-container {
         display: flex;
         flex-wrap: wrap;

@@ -1,10 +1,10 @@
-@include('nav.headerWithLogout')
+@include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
 <!---<a href="{{ route('logout') }}">Logout</a>--->
 
 
 <main>
-    <div class="welcomeContainer">
+    <div class="welcomeContainer desktop-welcome-container">
         <div class="yrgo"> <img src="/svgs/YRGO_logo_Y.svg" alt="yrgo"> </div>
         <h4 class="welcomeMessage"> Välkommen {{ $company->companyName }}! <br> Hitta era framtida kollegor - Lägg ut era <br> LIA-platser idag! </h4>
         <div class="interestedButtonsFirst">

@@ -1,8 +1,5 @@
-@auth
-@include('nav.header')
-@else
 @include('nav.headerIndex')
-@endauth
+
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
 
 
@@ -64,34 +61,6 @@
         <img src="/img/Desktop_Image_Index.png" alt="yrgo" class="desktop-image">
     </div>
 
-    <br><br><br><br>
-    <!------<form method="POST" action="{{ route('login.submit') }}">
-        @csrf
-        <div>
-            <label for="email">Email</label>
-            <input name="email" id="email" type="email" />
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input name="password" id="password" type="password" />
-        </div>
-        <button type="submit">Login</button>
-        @if ($errors->any())
-        <div>
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-
-        @if (session('error'))
-        <div>{{ session('error') }}</div>
-        @endif
-    </form> ----------->
-
-    <!-- Tillfälliga länkar så jag kommer åt sidorna: -->
     <br>
     <form action="{{ route('student.gallery') }}" method="GET">
         <button type="submit">elever</button>

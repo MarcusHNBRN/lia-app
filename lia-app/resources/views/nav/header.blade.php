@@ -16,7 +16,7 @@
     <header>
         <div class="headerContent">
             <div class="headerRight">
-                <div class="yrgoHeader"> <img src="/svgs/YRGO_logo_white.svg" alt="yrgo">
+                <div class="yrgoHeader">  <a href="/"> <img src="/svgs/YRGO_logo_white.svg" alt="yrgo"> </a>
                 </div>
             </div>
             <div class="headerLeft">
@@ -36,6 +36,7 @@
                 <img src="/svgs/YRGO_logo_red.svg" alt="yrgo" class="desktop-yrgo">
                 <p class="desktop-subtitle2">LIA-Galleri</p>
                 <p class="desktop-subtitle2">Branch eventet</p>
+                <p class="desktop-subtitle2"> <a href="{{ route('student.gallery') }}"> Elever </a> </p>
                 <p class="desktop-subtitle2">Ledningsgruppen</p>
                 <p class="desktop-subtitle2">Om oss</p>
             </div>

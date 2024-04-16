@@ -90,12 +90,19 @@ button:hover {
     align-items: center;
 }
 
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 377px;
+}
+
 .contact-card {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 369px;
-    background-color: var(--secondary);
     border-radius: 10px;
     gap: 16px;
     padding: 16px;

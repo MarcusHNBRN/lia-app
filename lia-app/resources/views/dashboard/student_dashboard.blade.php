@@ -1,3 +1,4 @@
+
 @auth
 @include('nav.headerWithLogout')
 @include('nav.header')
@@ -9,7 +10,7 @@
 <!--<a href="{{ route('logout') }}">Logout</a>--->
 
 <main>
-    <div class="welcomeContainer">
+    <div class="welcomeContainer desktop-welcome-container">
         <div class="yrgo"> <img src="/svgs/YRGO_logo_Y.svg" alt="yrgo"> </div>
         <h4 class="welcomeMessage"> Välkommen {{ $student->studentName }}! <br> Kom Igång och sök LIA! </h4>
         <div class="interestedButtonsFirst">
