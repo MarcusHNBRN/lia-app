@@ -58,21 +58,21 @@
         </div>
         <div class="input-container">
             <p class="input-title"> Arbetserfarenhet </p>
-            <textarea name="work" placeholder="Kort beskrivning om dig själv">{{ $studentInfo->work }}</textarea>
+            <input type="text" name="work" placeholder="Kort beskrivning om dig själv">{{ $studentInfo->work }}</input>
         </div>
         <div class="input-container">
             <p class="input-title"> Utbildning </p>
-            <textarea name="education" placeholder="Kort beskrivning om dig själv">{{ $studentInfo->education }}</textarea>
+            <input type="text" name="education" placeholder="Utbildning">{{ $studentInfo->education }}</input>
         </div>
 
         <div class="input-container">
             <p class="input-title"> Färdigheter </p>
-            <textarea name="skills" placeholder="Kort beskrivning om dig själv">{{ $studentInfo->skills }}</textarea>
+            <input type="text" name="skills" placeholder="Färdigheter">{{ $studentInfo->skills }}</input>
         </div>
 
         <div class="input-container">
             <p class="input-title"> Intressen </p>
-            <textarea name="interests" placeholder="Kort beskrivning om dig själv">{{ $studentInfo->interests }}</textarea>
+            <input type="text" name="interests" placeholder="Intressen">{{ $studentInfo->interests }}</input>
         </div>
 
         <div class="card-container">

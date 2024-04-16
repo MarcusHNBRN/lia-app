@@ -48,8 +48,6 @@
                         @foreach (explode(',', $studentInfo->utbildningar) as $utbildning)
                         <li>{{ trim($utbildning) }}</li>
                         @endforeach
-                        @else
-                        <li>Lägg till mer information</li>
                         @endif
                     </ul>
                 </div>
