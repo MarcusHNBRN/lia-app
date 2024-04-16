@@ -118,6 +118,13 @@ h6 {
         letter-spacing: 1.25px;
         line-height: 16px;
     }
+
+    .desktop-h5-bold {
+        font-family: "Inter", sans-serif;
+        font-size: 34px;
+        line-height: 36px;
+        font-weight: 700;
+    }
 }
 
 /*********/
