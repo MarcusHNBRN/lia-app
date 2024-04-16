@@ -35,7 +35,9 @@
                 <p class="desktop-subtitle2">Om oss</p>
             </div>
             <div class="desktop-svgsContainer">
-                <div class="signIn"> LOGGA IN </div>
+                <div class="signIn-button">
+                    <div class="signIn"> LOGGA IN </div>
+                </div>
             </div>
         </div>
     </header>
@@ -52,11 +54,11 @@
                     @csrf
                     <div class="loginFields body1">
                         <label for="email">E-mail *</label>
-                        <input name="email" id="email" type="email" placeholder="E-mail" />
+                        <input name="email" id="email" type="email" class="desktop-login-fields" placeholder="E-mail" />
                     </div>
                     <div class="loginFields body1">
                         <label for="password">Lösenord</label>
-                        <input name="password" id="password" type="password" placeholder="********" />
+                        <input name="password" id="password" type="password" class="desktop-login-fields" placeholder="********" />
                     </div>
                     <div class="buttonAndErrorField">
                         <button type="submit" class="loginButton buttonFont">Logga in</button>
