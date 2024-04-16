@@ -1,4 +1,9 @@
-@include('nav.headerWithLogout')
+@auth
+@include('nav.header')
+@else
+@include('nav.headerIndex')
+@endauth
+
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
 <!--<a href="{{ route('logout') }}">Logout</a>--->
 
