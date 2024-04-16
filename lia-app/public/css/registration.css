@@ -20,21 +20,16 @@ body {
 }
 
 .register {
-    background-color: var(--white);
-    color: var(--onyx);
+    background-color: var(--primary-color);
+    color: var(--white);
     width: auto;
+    border: none;
     height: 32px;
     border-radius: 32px;
-    border-color: black;
     text-transform: uppercase;
     padding-left: 16px;
     padding-right: 16px;
     text-align: center;
-}
-.register:hover {
-    background-color: var(--primary-color);
-    border: none;
-    color: var(--white);
 }
 
 #title {
@@ -271,6 +266,10 @@ input {
 
 .body1 {
     padding-bottom: 16px;
+}
+
+.register .body1 {
+    padding-bottom: 0px;
 }
 
 #availableSpots {
