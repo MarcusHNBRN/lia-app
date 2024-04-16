@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
 <div class="backButton"> <a href="{{ route('company_dashboard', ['id' => Auth::guard('company')->user()->id]) }}"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
 @section ('sidenav')
-<div id="mySidenav" class="sidenav">
+<div id="sidenav" class="sidenav">
     <div class="sidenav-logo" onclick="closeNav()">
         <img class="closebtn" src="/svgs/X.svg" alt="x">
     </div>

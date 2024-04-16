@@ -1,30 +1,31 @@
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
+
 <form method="POST" action="{{ route('registration.company.submit') }}" enctype="multipart/form-data">
     @csrf
     <div class="form-container">
         <div class="input-container">
-            <p class="input-title"> Företagets Namn * </p>
+            <p class="body1"> Företagets Namn * </p>
             <input type="text" name="companyName" placeholder="Företags Namn" required>
         </div>
         <div class="input-container">
-            <p class="input-title"> Företags Email * </p>
+            <p class="body1"> Företags Email * </p>
             <input type="email" name="email" placeholder="Företags Email" required>
         </div>
         <div class="input-container">
-            <p class="input-title"> Företagets Kontaktperson * </p>
+            <p class="body1"> Företagets Kontaktperson * </p>
             <input type="text" name="contactPerson" placeholder="Kontakt Person" required>
         </div>
         <div class="input-container">
-            <p class="input-title"> Telefonnummer </p>
+            <p class="body1"> Telefonnummer </p>
             <input type="tel" name="phone" placeholder="Phone Number">
         </div>
         <div class="input-container">
-            <p class="input-title"> Beskrivning om företaget </p>
-            <textarea name="description" placeholder="Description" required></textarea>
+            <p class="body1"> Beskrivning om företaget </p>
+            <textarea name="description" placeholder="Kort beskrivning om företaget" required></textarea>
         </div>
 
         <div class="card-container">
-            <p class="title"> Bransch </p>
+            <p class="body1" id="title"> Bransch </p>
             <div class="industry-container">
                 <label class="industry-button">
                     <input type="radio" name="industry" value="Bilindustrin" required>
@@ -46,7 +47,7 @@
             </div>
         </div>
         <div class="card-container">
-            <p class="title"> Antal anställda </p>
+            <p class="body1" id="title"> Antal anställda </p>
             <div class="radio-button-container">
                 <label class="employees-button">
                     <input type="radio" name="employees" value="1-20" required>
@@ -63,7 +64,7 @@
             </div>
         </div>
         <div class="card-container">
-            <p class="title"> Vilket sptåk används i huvudsak på företaget? </p>
+            <p class="body1" id="title"> Vilket språk används i huvudsak på företaget? </p>
             <div class="radio-button-container">
                 <label class="language-button">
                     <input type="radio" name="language" value="english" required>
@@ -78,13 +79,13 @@
 
 
         <div class="input-container">
-            <p class="input-title"> Länk till företagets Linkdin </p>
-            <input type="url" name="linkedin" placeholder="Länk till din Linkdin">
+            <p class="body1"> Länk till företagets Linkdin </p>
+            <input type="url" name="linkedin" placeholder="https://exempel.se/">
         </div>
 
         <div class="input-container">
-            <p class="input-title"> länk till företagets hemsida </p>
-            <input type="url" name="homepage" placeholder="Länk till din hemsida">
+            <p class="body1"> länk till företagets hemsida </p>
+            <input type="url" name="homepage" placeholder="https://exempel.se/">
         </div>
 
         <div class="card-container">
@@ -96,15 +97,17 @@
         </div>
 
         <!--------selma--------->
-        <h1>Lägg upp Lia-annons!</h1>
+        <div class="title-container">
+            <h5> Lägg upp Lia-annons! </h5>
+        </div>
 
         <div class="input-container">
-            <p class="input-title"> Annonstitel *</p>
+            <p class="body1"> Annonstitel *</p>
             <input type="text" name="title" placeholder="Titel" required>
         </div>
 
         <div class="card-container">
-            <p class="title"> Klass </p>
+            <p class="body1" id="title"> Klass </p>
             <div class="radio-button-container">
                 <label class="language-button">
                     <input type="radio" name="study" value="Webbutvecklare" required>
@@ -118,42 +121,44 @@
         </div>
 
         <div class="input-container">
-            <p class="input-title"> Beskrivning *</p>
+            <p class="body1"> Beskrivning *</p>
             <input type="text" name="description" placeholder="Beskriv uppdraget" required>
         </div>
 
         <div class="input-container">
-            <p class="input-title"> Arbetsuppgifter *</p>
+            <p class="body1"> Arbetsuppgifter *</p>
             <input type="text" name="yourJob" placeholder="Beskriv elevens arbetsuppgifter" required>
         </div>
 
         <div class="input-container">
-            <p class="input-title"> Vad erbjuder ni? </p>
+            <p class="body1"> Vad erbjuder ni? </p>
             <input type="text" name="offer" placeholder="Beskriv arbetsplats, möjligheter etc" required>
         </div>
 
         <div class="input-container">
-            <p class="input-title"> Vad söker ni? </p>
+            <p class="body1"> Vad söker ni? </p>
             <input type="text" name="lookingFor" placeholder="T.ex kompetenser, erfarenhet etc" required>
         </div>
+        <div class="card-container">
+            <div class="input-container">
+                <p class="body1" id="title">Antal platser</p>
+                <div class="availableSpots">
+                    <select id="availableSpots" class="center-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+            </div>
 
-        <div class="input-container">
-            <p class="input-title">Antal platser</p>
-            <select id="availableSpots">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
         </div>
 
-        <!----------------->
-
         <div class="input-container">
-            <p class="input-title"> Lösenord </p>
+            <p class="body1"> Lösenord </p>
             <input type="password" name="password" placeholder="Lösenord" required>
 
         </div>
@@ -161,7 +166,10 @@
             <input type="password" name="password_confirmation" placeholder="Confirm Password" required>
         </div>
 
-        <button type="submit">Register</button>
+        <button class="register" type="submit">
+            <p class="body1">skapa konto</p>
+        </button>
+    </div>
     </div>
 </form>
 

@@ -10,6 +10,40 @@ body {
     padding: 0;
 }
 
+.main-registration {
+    padding: 16px;
+}
+
+.title-container {
+    width: 361px;
+    padding: 32px;
+}
+
+.register {
+    background-color: var(--white);
+    color: var(--onyx);
+    width: auto;
+    height: 32px;
+    border-radius: 32px;
+    border-color: black;
+    text-transform: uppercase;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+}
+.register:hover {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--white);
+}
+
+#title {
+    color: var(--faded);
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
 .form-container {
     display: flex;
     justify-content: center;
@@ -33,14 +67,6 @@ body {
     width: 345px;
 }
 
-.title {
-    margin: 0;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-    color: var(--faded);
-}
-
 .input-title {
     padding-bottom: 16px;
     color: var(--onyx);
@@ -50,7 +76,6 @@ body {
     padding-right: 16px;
     padding-top: 32px;
     padding-bottom: 16px;
-    text-align: left;
 }
 
 .input-container textarea {
@@ -65,6 +90,10 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.button:active {
+    background-color: var(--primary-color);
 }
 
 .buttons button {
@@ -146,17 +175,17 @@ input {
 }
 .study-button input:checked + span,
 .language-button input:checked + span {
-    width: 160px;
+    width: 1000px;
     height: 32px;
 }
 
 .employees-button input:checked + span {
-    width: 108.34px;
+    width: 1000px;
     height: 32px;
 }
 
 .industry-button input:checked + span {
-    width: 345px;
+    width: 1000px;
     height: 32px;
 }
 
@@ -190,15 +219,15 @@ input {
     margin-left: 16px;
     margin-bottom: 16px;
     color: var(--faded);
-    float: left;
+    text-align: left;
+    width: 345px;
 }
 
 .file-container {
-    text-align: left;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #profile-picture-input,
@@ -240,6 +269,26 @@ input {
     white-space: normal;
 }
 
+.body1 {
+    padding-bottom: 16px;
+}
+
+#availableSpots {
+    width: 100%;
+    border-radius: 36px;
+    height: 36px;
+    max-width: 639px;
+}
+
+.avaliableSpots {
+    text-align: center;
+    padding: 16px;
+}
+
+label {
+    text-transform: uppercase;
+}
+
 @media only screen and (min-width: 992px) {
     .card-container {
         width: 826px;
@@ -247,5 +296,34 @@ input {
 
     input {
         width: 794px;
+    }
+
+    textarea {
+        min-width: 794px;
+    }
+
+    .button-container {
+        width: 826px;
+    }
+
+    #file-label {
+        width: 629px;
+        max-width: 629px;
+    }
+
+    .file-title {
+        width: 826px;
+    }
+
+    .title-container {
+        width: 828px;
+    }
+
+    .avaliableSpots {
+        min-width: 828px;
+    }
+
+    .main-registration {
+        padding: 32px;
     }
 }
