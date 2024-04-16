@@ -82,10 +82,10 @@ class StudentController extends Controller
 
             return redirect()->route('login')->with(['student' => $student]);
         } catch (ValidationException $e) {
-            return redirect('/')->withErrors($e->errors());
+            return redirect()->route('registration')->withErrors($e->errors());
         } catch (\Exception $e) {
             dd($e->getMessage());
-            return redirect('/')->withErrors('An unexpected error occurred.');
+            return redirect()->route('registration')->withErrors('An unexpected error occurred.');
         }
     }
 

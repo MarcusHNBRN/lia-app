@@ -32,7 +32,8 @@ Route::view('/companyGallery', 'companyGallery')->name('company');
 
 Route::get('/registration', function () {
     return view('registration');
-});
+})->name('registration');
+
 
 /** Routes for galleries and individual students etc. **/
 Route::get('/studentGallery', [StudentGalleryController::class, 'index'])->name('student.gallery');
