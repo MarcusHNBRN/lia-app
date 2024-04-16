@@ -44,11 +44,11 @@
         </div>
         <div class="input-container">
             <p class="body1"> Arbetserfarenhet </p>
-            <input type="text" name="work" placeholder="Skriv in arbetserfarenhet separerade med kommatecken (,)"></input>
+            <input type="text" name="work" placeholder="Skriv in arbetserfarenhet separerade med kommatecken (,)">
         </div>
         <div class="input-container">
             <p class="body1"> Utbildning </p>
-            <input type="text" name="education" placeholder="Skriv in utbildning separerade med kommatecken (,)"></input>
+            <input type="text" name="education" placeholder="Skriv in utbildning separerade med kommatecken (,)">
         </div>
 
         <div class="input-container">
