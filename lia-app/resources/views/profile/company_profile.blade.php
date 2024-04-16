@@ -1,8 +1,18 @@
 @include('nav.header')
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
 <div class="backButton"> <a href="{{ route('company_dashboard', ['id' => Auth::guard('company')->user()->id]) }}"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
+@section ('sidenav')
+<div id="mySidenav" class="sidenav">
+    <div class="sidenav-logo" onclick="closeNav()">
+        <img class="closebtn" src="/svgs/X.svg" alt="x">
+    </div>
+    <a href="/">Mina Sidor</a>
+    <a href="/">Galleri</a>
+    <a href="/">Skapa Annons</a>
 
-
+    <a href="/">Logga ut</a>
+</div>
+@endsection
 <div class="profile">
     <div class="edit-container">
         <a href="{{ route('company.profile.edit', ['id' => Auth::guard('company')->user()->id]) }}"><img class="gear" src="/svgs/gear.svg" alt="gear"></a>
@@ -52,5 +62,5 @@
     </div>
 </div>
 </div>
-
+<script src="{{ asset('js/sidenav.js') }}"></script>
 @include('nav.footer')

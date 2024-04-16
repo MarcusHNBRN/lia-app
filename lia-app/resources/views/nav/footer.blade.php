@@ -18,9 +18,10 @@
             </div>
         </div>
         <div class="footerCopy captionFont">
-        &#169 2024 Yrgo, högre yrkesutbildning Göteborg
+            &#169 2024 Yrgo, högre yrkesutbildning Göteborg
         </div>
     </div>
+
 </footer>
 </body>
 
