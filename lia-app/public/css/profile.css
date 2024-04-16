@@ -99,6 +99,7 @@ button:hover {
 }
 
 .contact-card {
+    background-color: var(--secondary);
     display: flex;
     flex-direction: column;
     text-align: center;
