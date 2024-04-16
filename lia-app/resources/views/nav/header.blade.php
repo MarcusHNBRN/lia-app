@@ -38,15 +38,15 @@
                     </a>
                     @elseif(Auth::guard('company')->check())
                     <a href="{{ route('company.profile', ['id' => Auth::guard('company')->user()->id]) }}">
-                        <img src="/svgs/you_in_black.svg" class="icon" alt="Gallery icon">Mina sidor
+                        <p class="body1">Mina sidor</p>
                     </a>
                     <a href="{{ route('company.gallery', ['id' => Auth::guard('company')->user()->id]) }}">
-                        <img src="/svgs/ImagesSquare.svg" class="icon" alt="Gallery icon">Galleri
+                        <p class="body1">Galleri</p>
                     </a>
                     @endif
 
                     <a class="logout" href="{{ route('logout') }}">
-                        <img src="/svgs/logout.svg" class="icon" alt="Gallery icon">Logga ut
+                        <p class="body1">Logga ut</p>
                     </a>
                 </div>
             </div>
