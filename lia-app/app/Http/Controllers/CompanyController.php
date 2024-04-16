@@ -91,12 +91,12 @@ class CompanyController extends Controller
 
             return redirect()->route('login')->with(['company' => $company]);
         } catch (ValidationException $e) {
-            return redirect('/')->withErrors($e->errors());
+            return redirect()->route('registration')->withErrors($e->errors());
         } catch (\Exception $e) {
             Log::error('An unexpected error occurred: ' . $e->getMessage());
             Log::error('File: ' . $e->getFile() . ' Line: ' . $e->getLine());
             Log::error('Stack Trace: ' . $e->getTraceAsString());
-            return redirect('/')->withErrors('An unexpected error occurred.');
+            return redirect()->route('registration')->withErrors('An unexpected error occurred.');
         }
     }
     private function storeFile(UploadedFile $file)

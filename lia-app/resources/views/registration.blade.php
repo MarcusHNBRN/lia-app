@@ -4,28 +4,29 @@
 <link rel="stylesheet" href="{{ asset('css/registration.css') }}" />
 
 <div class="backButton"> <a href="/"> <img src="/svgs/leftArrow.svg" alt="back"> </a> </div>
-    <div class="choice-container">
-        <div class="title-container">
-            <h5> Skapa konto </h5>
+<div class="choice-container">
+    @include('errors')
+    <div class="title-container">
+        <h5> Skapa konto </h5>
+    </div>
+    <div class="button-container">
+        <p class="body1" id="title"> Skapa konto som
+        <p>
+        <div class="buttons">
+            <button href="student" class="buttonFont" onclick="showStudentForm()"> Elev</button>
+            <button href="company" class="buttonFont" onclick="showCompanyForm()"> Företag</button>
         </div>
-        <div class="button-container">
-            <p class="body1" id="title"> Skapa konto som
-            <p>
-            <div class="buttons">
-                <button href="student" class="buttonFont" onclick="showStudentForm()"> Elev</button>
-                <button href="company" class="buttonFont" onclick="showCompanyForm()"> Företag</button>
-            </div>
 
-        </div>
     </div>
+</div>
 
-    <div id="student-form" class="registration-form">
-        @include('registration.student')
-    </div>
+<div id="student-form" class="registration-form">
+    @include('registration.student')
+</div>
 
-    <div id="company-form" class="registration-form">
-        @include('registration.company')
-    </div>
+<div id="company-form" class="registration-form">
+    @include('registration.company')
+</div>
 </main>
 <script>
     function showStudentForm() {

@@ -1,11 +1,13 @@
-    @include('nav.header')
+
+@auth
+@include('nav.headerWithLogout')
+@include('nav.header')
+@else
+@include('nav.headerIndex')
+@endauth
 
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
 <!--<a href="{{ route('logout') }}">Logout</a>--->
-
-@if(Auth::guard('student')->check())
-<a href="{{ route('student.profile', ['id' => Auth::guard('student')->user()->id]) }}">View Profile</a>
-@endif
 
 <main>
     <div class="welcomeContainer desktop-welcome-container">

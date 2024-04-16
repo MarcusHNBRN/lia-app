@@ -19,7 +19,7 @@
                         <p class="body1"> Profilbild </p>
                     </div>
                     <input type="file" id="profile-picture-input" name="profile_picture" onchange="updateFileName('profile-picture-input')">
-                    <label for="profile-picture-input" class="buttonFont" id="file-label">Choose File</label>
+                    <label for="profile-picture-input" class="buttonFont" id="file-label">Ladda Upp</label>
                 </div>
             </div>
 
