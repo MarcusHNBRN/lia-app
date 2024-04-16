@@ -18,14 +18,16 @@
 
     <div class="desktop-container">
         <div class="desktop-welcome">
-            <h1 class="desktop-h1-bold">Välkommen till Yrgos lia portal</h1>
-            <h1 class="desktop-h1-thin">Välj en Lia plats som leder till jobb</h1>
-            <div>
-                <div class="desktop-button">
-                    skapa konto
+            <h1 class="desktop-h1-bold">VÄLKOMMEN TILL YRGOS LIA PORTAL</h1>
+            <h1 class="desktop-h1-thin">VÄLJ EN LIA PLATS SOM LEDER TILL JOBB</h1>
+            <div class="desktop-first-buttons">
+                <div class="desktop-button desktop-create-account desktop-h1-button"> <a href="/registration">
+                        SKAPA KONTO </a>
                 </div>
-                <div class="desktop-button">
-                    skapa konto
+                <div class="desktop-button desktop-company-gallery desktop-h1-button">
+                    <form action="{{ route('company.gallery') }}" method="GET">
+                        <button type="submit" class="desktop-h1-button d-c-g">FÖRETAGS-GALLERI</button>
+                    </form>
                 </div>
             </div>
         </div>

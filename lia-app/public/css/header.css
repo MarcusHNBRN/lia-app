@@ -111,6 +111,13 @@ h6 {
         line-height: 100px;
         font-weight: 100;
     }
+
+    .desktop-h1-button {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        letter-spacing: 1.25px;
+        line-height: 16px;
+    }
 }
 
 /*********/
@@ -256,11 +263,11 @@ header {
     .desktop-links {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         flex-direction: row;
 
+        gap: 32px;
         padding-left: 64px;
-        width: 50%;
+        width: 95%;
     }
 
     .desktop-links img, .desktop-links p {
@@ -273,7 +280,7 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        margin-right: 64px;
+        margin-right:64px;
         width: 145px;
     }
 
@@ -295,8 +302,53 @@ header {
         height: 24px;
     }
 
+    .signIn-button {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
     .signIn {
+        display: flex;
+        flex-wrap: wrap;
         color: var(--red);
         border: 2px solid var(--red);
+        padding: 8px 16px;
+    }
+
+    .loginContainer {
+        margin-top: 88px;
+    }
+
+    .loginNav {
+        color: var(--red);
+        color: var(--white);
+        width: 100vw;
+        top:0;
+    }
+
+    .loginNav h5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loginForm {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loginFields {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top:60px;
+    }
+
+    .desktop-login-fields {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
