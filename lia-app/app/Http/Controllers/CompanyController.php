@@ -36,6 +36,7 @@ class CompanyController extends Controller
             'study.required' => 'Study must be selected.',
             'study.in' => 'Invalid study selected.',
             'availableSpots.required' => 'Available spots must be specified.',
+            'availableSpots.in' => 'Invalid.',
         ];
 
         try {
@@ -50,6 +51,13 @@ class CompanyController extends Controller
                 'language' => 'required|string',
                 'linkedin' => 'nullable|url',
                 'homepage' => 'nullable|url',
+                'title' => 'required|string',
+                'description' => 'nullable|string',
+                'yourJob' => 'nullable|string',
+                'offer' => 'nullable|string',
+                'lookingFor' => 'nullable|string',
+                'study' => 'required|in:WU,DD',
+                'availableSpots' => 'required|in:1,2,3,4,5,6,7',
                 'password' => ['required', 'confirmed', 'min:8'],
             ], $messages);
 
@@ -70,16 +78,16 @@ class CompanyController extends Controller
             }
             $company->save();
 
-            $companyLiaInfo = new CompanyInfo;
-            $companyLiaInfo->companyId = $company->id;
-            $companyLiaInfo->study = $validatedData['title'];
-            $companyLiaInfo->study = $validatedData['description'];
-            $companyLiaInfo->study = $validatedData['yourJob'];
-            $companyLiaInfo->study = $validatedData['offer'];
-            $companyLiaInfo->study = $validatedData['lookingFor'];
-            $companyLiaInfo->study = $validatedData['study'];
-            $companyLiaInfo->study = $validatedData['availableSpots'];
-            $companyLiaInfo->save();
+            $companyInfo = new CompanyInfo;
+            $companyInfo->companyId = $company->id;
+            $companyInfo->title = $validatedData['title'];
+            $companyInfo->description = $validatedData['description'];
+            $companyInfo->yourJob = $validatedData['yourJob'];
+            $companyInfo->offer = $validatedData['offer'];
+            $companyInfo->lookingFor = $validatedData['lookingFor'];
+            $companyInfo->study = $validatedData['study'];
+            $companyInfo->availableSpots = $validatedData['availableSpots'];
+            $companyInfo->save();
 
             return redirect()->route('login')->with(['company' => $company]);
         } catch (ValidationException $e) {

@@ -90,8 +90,8 @@ h6 {
     line-height: 16px;
 }
 
-@media (min-width: 650px) {
-    /*selma kolla rätt storlek*/
+
+@media (min-width:650px) {
     .desktop-subtitle2 {
         font-family: "Inter", sans-serif;
         font-size: 16px;
@@ -118,6 +118,13 @@ h6 {
         font-size: 16px;
         letter-spacing: 1.25px;
         line-height: 16px;
+    }
+
+    .desktop-h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 48px;
+        letter-spacing: -0.5px;
+        line-height: 72px;
     }
 
     .desktop-h5-bold {

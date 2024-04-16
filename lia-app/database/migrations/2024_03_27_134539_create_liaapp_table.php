@@ -45,7 +45,7 @@ return new class extends Migration
 
         /** FÖRETAG **/
         Schema::create('companies', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
             $table->string('companyName');
             $table->string('email')->unique();
             $table->string('password');
@@ -58,7 +58,6 @@ return new class extends Migration
             //icke obligatoriska:
             $table->string('linkedin')->nullable();
             $table->string('homepage')->nullable();
-            $table->string('adress')->nullable();
             $table->string('phone')->nullable();
             $table->timestamps();
         });

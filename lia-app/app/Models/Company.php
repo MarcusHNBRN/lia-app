@@ -16,18 +16,16 @@ class Company extends Authenticatable
         'companyName',
         'email',
         'password',
-        'adress',
         'contactPerson',
         'phone',
         'description',
         'industry',
         'employees',
-        'language',
         'linkedin',
         'homepage'
     ];
 
-    public function CompanyInfo()
+    public function companyInfo()
     {
         return $this->hasOne(CompanyInfo::class);
     }

@@ -110,11 +110,11 @@
             <p class="body1" id="title"> Klass </p>
             <div class="radio-button-container">
                 <label class="language-button">
-                    <input type="radio" name="study" value="Webbutvecklare" required>
+                    <input type="radio" name="study" value="WU" required>
                     <span>Webbutvecklare</span>
                 </label>
                 <label class="language-button">
-                    <input type="radio" name="study" value="Digital Designer" required>
+                    <input type="radio" name="study" value="DD " required>
                     <span>Digital Designer</span>
                 </label>
             </div>
@@ -154,7 +154,6 @@
                     </select>
                 </div>
             </div>
-
         </div>
 
         <div class="input-container">
