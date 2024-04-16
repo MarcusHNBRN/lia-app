@@ -225,9 +225,6 @@ body {
     overflow: hidden;
 }
 
-.companyName {
-}
-
 .commpanySpots {
     display: flex;
     justify-content: space-evenly;
@@ -402,6 +399,7 @@ body {
 .firstDescriptionRow, .compFirstDescriptionRow {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding-left: 12px;
     padding-right: 12px;
