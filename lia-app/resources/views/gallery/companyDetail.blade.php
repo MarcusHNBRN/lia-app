@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="{{ asset('css/profile.css') }}" />
 
 <div class="backButton">
-    <a href="{{ url()->previous() }}">
+    <a href="/companyGallery">
         <img src="/svgs/leftArrow.svg" alt="back">
     </a>
 </div>

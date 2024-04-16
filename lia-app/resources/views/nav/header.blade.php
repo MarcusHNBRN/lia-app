@@ -16,7 +16,7 @@
     <header>
         <div class="headerContent">
             <div class="headerRight">
-                <div class="yrgoHeader"> <img src="/svgs/YRGO_logo_white.svg" alt="yrgo">
+                <div class="yrgoHeader">  <a href="/"> <img src="/svgs/YRGO_logo_white.svg" alt="yrgo"> </a>
                 </div>
             </div>
             <div class="headerLeft">
